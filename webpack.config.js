@@ -1,13 +1,12 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const autoprefixer = require("autoprefixer");
 const path = require("path");
 
 const src = path.resolve(__dirname, "src");
 
 module.exports = {
-  entry: path.resolve(src, "index.js"),
+  entry: path.resolve(src, "index.ts"),
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].[hash].bundle.js",
@@ -20,19 +19,14 @@ module.exports = {
     open: true,
   },
   resolve: {
-    extensions: [".js", ".json"],
+    extensions: [".ts", ".js", ".json"],
   },
   module: {
     rules: [
       {
-        test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-env"],
-          },
-        },
+        test: /\.ts$/,
+        loader: "ts-loader",
+        exclude: /(node_modules)/,
       },
       {
         test: /\.css$/i,
@@ -42,7 +36,9 @@ module.exports = {
           {
             loader: "postcss-loader",
             options: {
-              plugins: [autoprefixer],
+              postcssOptions: {
+                plugins: [require("postcss-nested"), require("autoprefixer")],
+              },
             },
           },
         ],
@@ -55,11 +51,9 @@ module.exports = {
     },
   },
   plugins: [
-    // new MiniCssExtractPlugin({
-    //   filename: "style.[hash].bundle.css",
-    //   disable: false,
-    //   allChunks: true,
-    // }),
+    new MiniCssExtractPlugin({
+      chunkFilename: "style.[hash].bundle.css",
+    }),
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
