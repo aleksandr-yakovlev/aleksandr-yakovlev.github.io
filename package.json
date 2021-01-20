@@ -2,7 +2,7 @@
   "name": "aleksandr-yakovlev.github.io",
   "version": "1.0.0",
   "description": "Personal page",
-  "homepage": "https://github.com/aleksandr-yakovlev/",
+  "homepage": "https://aleksandr-yakovlev.github.io",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
