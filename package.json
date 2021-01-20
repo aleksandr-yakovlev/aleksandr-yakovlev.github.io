@@ -2,10 +2,13 @@
   "name": "aleksandr-yakovlev.github.io",
   "version": "1.0.0",
   "description": "Personal page",
+  "homepage": "https://github.com/aleksandr-yakovlev/",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode=production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -16,11 +19,11 @@
   "bugs": {
     "url": "https://github.com/aleksandr-yakovlev/aleksandr-yakovlev.github.io/issues"
   },
-  "homepage": "https://github.com/aleksandr-yakovlev/aleksandr-yakovlev.github.io#readme",
   "devDependencies": {
     "autoprefixer": "10.1.0",
     "clean-webpack-plugin": "3.0.0",
     "css-loader": "3.6.0",
+    "gh-pages": "^3.1.0",
     "html-webpack-plugin": "4.5.0",
     "mini-css-extract-plugin": "1.3.3",
     "postcss": "^8.2.1",

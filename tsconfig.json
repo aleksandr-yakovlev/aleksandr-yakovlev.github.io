@@ -6,7 +6,7 @@
     "paths": {
       "*": ["./src/*"]
     },
-    "outDir": "./dist/",
+    "outDir": "./build/",
     "module": "commonjs",
     "target": "es6",
     "declaration": false,

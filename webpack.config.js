@@ -8,7 +8,7 @@ const src = path.resolve(__dirname, "src");
 module.exports = {
   entry: path.resolve(src, "index.ts"),
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "build"),
     filename: "[name].[hash].bundle.js",
   },
   devServer: {
