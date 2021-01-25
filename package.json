@@ -8,7 +8,8 @@
     "start": "webpack-dev-server",
     "build": "webpack --mode=production",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "surge": "surge -p ./public -d aleksandr-yakovlev.surge.sh"
   },
   "repository": {
     "type": "git",
