@@ -9,4 +9,6 @@
   --preview-color: rgba(222, 175, 143, 0.9);
   --highlight-color: #7b0000;
   --more-color: #999;
+  --border-left-color: #333;
+  --border-left-hover-color: #666;
 }

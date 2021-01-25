@@ -43,7 +43,7 @@
     margin: 0;
     &:before {
       content: "";
-      border-left: 1px solid #333;
+      border-left: 1px solid var(--border-left-color);
       position: absolute;
       left: 0.5rem;
       top: 0.5rem;
@@ -51,7 +51,7 @@
     }
     &:hover {
       &:before {
-        border-left: 1px solid #666;
+        border-left: 1px solid var(--border-left-hover-color);
       }
     }
 
