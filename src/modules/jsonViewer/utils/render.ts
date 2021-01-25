@@ -102,7 +102,7 @@ export const renderNode = ({
               const childPath = path ? `${path}.${key}` : key;
               const keyValue = _.isKeyValue(childData);
               return `
-              <li id=${childPath} ${
+              <li id="${childPath}" ${
                 keyValue ? `class="switch${expanded ? " expanded" : ""}"` : ""
               }> 
               ${renderKey(isNodeArr ? "" : key)}

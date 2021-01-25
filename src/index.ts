@@ -4,7 +4,7 @@ import data from "./cv.json";
 import "./style.css";
 
 const container = document.getElementById("root") || document.body;
-const expanded = false;
+const expanded = true;
 const autoTheme = () =>
   window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 container.dataset.theme = autoTheme();

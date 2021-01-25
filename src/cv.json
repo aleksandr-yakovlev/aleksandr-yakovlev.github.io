@@ -1,1 +1,84 @@
-{}
+{
+  "who": {
+    "name": "Aleksandr Yakovlev",
+    "bio": "Frontend developer. I like engineering challenges, passionate in web technologies, performance",
+    "born year": 1989,
+    "location": "Moscow, Russia",
+    "email": "aleksandr.yakovlev@live.com",
+    "github": "https://github.com/aleksandr-yakovlev",
+    "telegram": "https://t.me/stedman"
+  },
+  "skills": [
+    "ES6/ES7",
+    "TypeSctipt",
+    "React",
+    "Node.js",
+    "Jest",
+    "Webpack",
+    "Docker",
+    "Postgress",
+    "ClickHouse",
+    "Git",
+    "Linux",
+    "Team management"
+  ],
+  "experience": [
+    {
+      "company": "sber",
+      "position": "teamlead",
+      "begin": "december 2014",
+      "end": "present",
+      "tasks": [
+        "create analytics system",
+        "drive development, architecture",
+        "manage a team of 10 people with intake scrum agile"
+      ],
+      "stack": [
+        "React",
+        "Node.js",
+        "LoopBack",
+        "Kafka",
+        "ClickHouse",
+        "Greenplum",
+        "Elasticsearch",
+        "NiFi",
+        "Oracle GG",
+        "Docker",
+        "Traefik",
+        "Keycloak"
+      ]
+    },
+    {
+      "company": "alfabank",
+      "position": "middle developer",
+      "begin": "march 2011",
+      "end": "december 2014",
+      "tasks": ["create frontends for local services", "build DWH"]
+    }
+  ],
+  "courses": [
+    {
+      "title": "Middle frontend developer",
+      "organization": "Yandex",
+      "year": "2020"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Northern (Arctic) Federal University named after M.V. Lomonosov",
+      "department": "Institute of Information and Space Technologies",
+      "major": "Information Systems and Technologies",
+      "level": "Engineer",
+      "begin": "2009",
+      "end": "2012"
+    },
+    {
+      "institution": "Northern (Arctic) Federal University named after M.V. Lomonosov",
+      "department": "College of Telecommunications and Information Technology",
+      "major": "Information Systems and Technologies",
+      "level": "College",
+      "begin": "2005",
+      "end": "2009"
+    }
+  ]
+}
