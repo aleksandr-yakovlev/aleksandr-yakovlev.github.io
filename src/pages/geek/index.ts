@@ -1,5 +1,5 @@
-import { JsonViewer } from "./modules/jsonViewer";
-import data from "./cv.json";
+import { JsonViewer } from "../../modules/jsonViewer";
+import data from "../../cv.json";
 
 import "./style.css";
 

@@ -3,10 +3,18 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const path = require("path");
 
-const src = path.resolve(__dirname, "src");
+const pages = path.resolve(__dirname, "src", "pages");
+
+const PAGES = {
+  main: path.resolve(pages, "main"),
+  geek: path.resolve(pages, "geek"),
+};
 
 module.exports = {
-  entry: path.resolve(src, "index.ts"),
+  entry: {
+    main: PAGES.main,
+    geek: PAGES.geek,
+  },
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "[name].[hash].bundle.js",
@@ -43,11 +51,21 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.html$/,
+        loader: "raw-loader",
+        include: path.resolve(pages, "includes"),
+      },
     ],
   },
   optimization: {
     splitChunks: {
-      chunks: "all",
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/].*\.js$/,
+          chunks: "all",
+        },
+      },
     },
   },
   plugins: [
@@ -57,8 +75,16 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
-      title: "Aleksandr Yakovlev",
-      template: "index.html",
+      filename: "index.html",
+      template: path.resolve(PAGES.main, "template.html"),
+      chunks: ["main"],
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: true,
+      filename: "geek.html",
+      template: path.resolve(PAGES.geek, "template.html"),
+      chunks: ["geek"],
     }),
     new CleanWebpackPlugin(),
   ],

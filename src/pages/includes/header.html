@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="http://aleksandr-yakovlev.surge.sh/favicon.ico" type="image/x-icon">
+  <% for (var chunk in htmlWebpackPlugin.files.css) { %>
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css[chunk]%>">
+    </link>
+    <% } %>
+      <title>
+        Aleksandr Yakovlev
+      </title>
+</head>
+
+<body>
