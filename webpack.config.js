@@ -57,7 +57,6 @@ module.exports = {
         test: /\.html$/,
         loader: "raw-loader",
         include: pages,
-        exclude: /\/template.html$/,
       },
     ],
   },

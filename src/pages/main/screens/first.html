@@ -1,10 +1,10 @@
 <div class="screen first-screen">
   <div class="screen-wrapper">
     <menu class="menu">
-      <li>Intro</li>
-      <li>Skills</li>
-      <li>Experience</li>
-      <li title="Switch to JSON view">Geek</li>
+      <li><a href="#intro">Intro</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li title="Switch to JSON view"><a href="/geek.html">Geek</a></li>
       <li class="menu-light">
         <span class="icon-dwnld"></span>
         <span class="light-text"> Get CV</span>
@@ -12,15 +12,8 @@
     </menu>
     <div class="info">
       <p class="info-name">Aleksandr Yakovlev</p>
-      <p class="info-prof"><%-who.role%></p>
-      <p class="info-badge">
-        <a class="badge telegram" href="https://t.me/stedman"></a>
-        <a
-          class="badge github"
-          href="https://github.com/aleksandr-yakovlev"
-        ></a>
-        <a class="badge mail" href="mailto:aleksandr.yakovlev@live.com"></a>
-      </p>
+      <p class="info-prof"><%-cv.who.role%></p>
+      <%=badge%>
     </div>
     <div class="row"></div>
     <div class="img-portrait">

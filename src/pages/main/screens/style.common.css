@@ -31,15 +31,23 @@
   margin-bottom: 100px;
 }
 
-.skill {
+.list {
   &-head {
-    margin-bottom: 0px;
+    margin: 0;
   }
   &-foot {
-    margin-top: 0px;
+    margin: 0 0 30px 0;
     & span {
       white-space: pre-wrap;
       display: inline-block;
     }
+  }
+}
+
+.contact {
+  text-align: center;
+  &-text {
+    font-size: 50px;
+    margin: 0px;
   }
 }

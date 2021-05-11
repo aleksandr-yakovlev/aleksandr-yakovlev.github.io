@@ -2,19 +2,22 @@
     head=_.template(require('./../common/head.html').default)({htmlWebpackPlugin}),
     header=_.template(require('./header.html').default)(),
     footer=_.template(require('./footer.html').default)(),
-    screenTemplate=_.template(require('./screen.template.html').default),
-    screenFirst=_.template(require('./screen.first.html').default),
-    screenSecond=_.template(require('./screen.second.html').default),
-    screenThird=_.template(require('./screen.third.html').default),
-    screenFourth=_.template(require('./screen.fourth.html').default),
+    screenTemplate=_.template(require('./screens/template.html').default),
+    screenFirst=_.template(require('./screens/first.html').default),
+    screenIntro=_.template(require('./screens/intro.html').default),
+    screenSkills=_.template(require('./screens/skills.html').default),
+    screenExperience=_.template(require('./screens/experience.html').default),
+    screenContact=_.template(require('./screens/contact.html').default),
+    badge=_.template(require('./screens/badge.html').default)(),
     scripts=_.template(require('./../common/scripts.html').default)({htmlWebpackPlugin})
     cv=require('../../cv.json')
 %>
 
 <%=head%>
-<%=screenFirst(cv)%>
-<%=screenTemplate({header,footer,screen:screenSecond(cv),img:"techman"})%>
-<%=screenTemplate({header,footer,screen:screenThird(cv),img:"bb8"})%>
-<%=screenTemplate({header,footer,screen:screenFourth(cv),img:"pizza"})%>
+<%=screenFirst({cv,badge})%>
+<%=screenTemplate({id:"intro",header,footer,screen:screenIntro(cv),img:"techman"})%>
+<%=screenTemplate({id:"skills",header,footer,screen:screenSkills(cv),img:"bb8"})%>
+<%=screenTemplate({id:"experience",header,footer,screen:screenExperience(cv),img:"pizza"})%>
+<%=screenContact({header,badge})%>
 
 <%=scripts%>

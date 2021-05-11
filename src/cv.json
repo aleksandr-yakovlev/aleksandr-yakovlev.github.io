@@ -29,7 +29,7 @@
     {
       "company": "Sber",
       "position": "Teamlead",
-      "begin": "december 2014",
+      "begin": "2014",
       "end": "present",
       "tasks": [
         "create analytics system",
@@ -54,8 +54,8 @@
     {
       "company": "Alfabank",
       "position": "Middle developer",
-      "begin": "march 2011",
-      "end": "december 2014",
+      "begin": "2011",
+      "end": "2014",
       "tasks": ["create frontends for local services", "build DWH"]
     }
   ],
