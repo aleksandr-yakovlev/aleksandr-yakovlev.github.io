@@ -6,12 +6,14 @@ const path = require("path");
 const pages = path.resolve(__dirname, "src", "pages");
 
 const PAGES = {
+  common: path.resolve(pages, "common"),
   main: path.resolve(pages, "main"),
   geek: path.resolve(pages, "geek"),
 };
 
 module.exports = {
   entry: {
+    common: PAGES.common,
     main: PAGES.main,
     geek: PAGES.geek,
   },
@@ -54,7 +56,8 @@ module.exports = {
       {
         test: /\.html$/,
         loader: "raw-loader",
-        include: path.resolve(pages, "includes"),
+        include: pages,
+        exclude: /\/template.html$/,
       },
     ],
   },
@@ -76,15 +79,15 @@ module.exports = {
       inject: false,
       hash: true,
       filename: "index.html",
-      template: path.resolve(PAGES.main, "template.html"),
-      chunks: ["main"],
+      template: path.resolve(PAGES.main, "template.ejs"),
+      chunks: ["common", "main"],
     }),
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
       filename: "geek.html",
-      template: path.resolve(PAGES.geek, "template.html"),
-      chunks: ["geek"],
+      template: path.resolve(PAGES.geek, "template.ejs"),
+      chunks: ["common", "geek"],
     }),
     new CleanWebpackPlugin(),
   ],

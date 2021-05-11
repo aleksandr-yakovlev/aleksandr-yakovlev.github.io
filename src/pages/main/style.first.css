@@ -1,0 +1,110 @@
+.first-screen {
+  background: linear-gradient(135deg, #db00a4, #853ec1 70%);
+  border-bottom: 2px solid black;
+}
+.menu {
+  align-self: flex-end;
+  font-weight: 600;
+  list-style-type: none;
+  margin: 100px 200px 0 0;
+  font-size: 14px;
+  & li {
+    padding: 15px;
+    display: inline;
+    cursor: pointer;
+  }
+  & .menu-light {
+    border: solid 2px black;
+    border-radius: 5px;
+  }
+  & .icon-dwnld {
+    display: inline-block;
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+    background: url("http://aleksandr-yakovlev.surge.sh/icons/dwn.svg")
+      no-repeat;
+  }
+  & .light-text {
+    padding-left: 3px;
+  }
+}
+
+.img-portrait {
+  align-self: flex-end;
+  position: relative;
+  & .img-hi {
+    left: -205px;
+    width: 250px;
+    height: 150px;
+    background: url(https://aleksandr-yakovlev.surge.sh/icons/hi.svg) no-repeat;
+    position: absolute;
+  }
+  & .img-src {
+    display: block;
+  }
+}
+
+.info {
+  margin-left: 70px;
+  p {
+    margin: 10px;
+  }
+  &-name {
+    font-size: 32px;
+    font-weight: 800;
+  }
+  &-prof {
+    font-size: 24px;
+  }
+  &-badge {
+    padding-top: 30px;
+    a:not(:first-child) {
+      padding-left: 15px;
+    }
+  }
+}
+
+.badge {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  content: "";
+  cursor: pointer;
+}
+
+.telegram {
+  background: url("https://aleksandr-yakovlev.surge.sh/icons/telegram.svg")
+    center center no-repeat;
+}
+
+.github {
+  background: url("https://aleksandr-yakovlev.surge.sh/icons/github.svg") center
+    center no-repeat;
+}
+
+.mail {
+  background: url("https://aleksandr-yakovlev.surge.sh/icons/mail.svg") center
+    center no-repeat;
+}
+
+.row {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 44px;
+  height: 28px;
+  background: url("https://aleksandr-yakovlev.surge.sh/icons/row.svg") center
+    center no-repeat;
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

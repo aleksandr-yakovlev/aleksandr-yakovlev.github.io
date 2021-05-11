@@ -1,0 +1,5 @@
+<h1>Skills</h1>
+<%Object.keys(skills).forEach(skill => { %>
+<h3 class="skill-head"><%-skill%></h3>
+<p class="skill-foot"><span><%=skills[skill].join(" </span><span>|&nbsp;")%></p>
+<% }) %>

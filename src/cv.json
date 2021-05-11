@@ -1,31 +1,34 @@
 {
   "who": {
     "name": "Aleksandr Yakovlev",
-    "bio": "Frontend developer. I like engineering challenges, passionate in web technologies, performance",
+    "role": "Software Engineer",
+    "bio": "I like engineering challenges, passionate in web technologies, performance, frontend architecture and related subjects",
+    "hobby": "I love 🏂 #mountains #snowboard",
     "born year": 1989,
     "location": "Moscow, Russia",
     "email": "aleksandr.yakovlev@live.com",
     "github": "https://github.com/aleksandr-yakovlev",
     "telegram": "https://t.me/stedman"
   },
-  "skills": [
-    "ES6/ES7",
-    "TypeSctipt",
-    "React",
-    "Node.js",
-    "Jest",
-    "Webpack",
-    "Docker",
-    "Postgress",
-    "ClickHouse",
-    "Git",
-    "Linux",
-    "Team management"
-  ],
+  "skills": {
+    "Frontend": ["ES6/ES7", "TS", "React", "Node.js", "Jest", "Webpack", "Git"],
+    "Data": [
+      "Spark",
+      "Kafka",
+      "Postgress",
+      "ClickHouse",
+      "Greenplum",
+      "ELK",
+      "Oracle/GG",
+      "MS"
+    ],
+    "DevOps": ["Linux", "Docker", "OpenShift"],
+    "Management": ["Agile", "ITSM", "Motivation", "Building project team"]
+  },
   "experience": [
     {
-      "company": "sber",
-      "position": "teamlead",
+      "company": "Sber",
+      "position": "Teamlead",
       "begin": "december 2014",
       "end": "present",
       "tasks": [
@@ -49,8 +52,8 @@
       ]
     },
     {
-      "company": "alfabank",
-      "position": "middle developer",
+      "company": "Alfabank",
+      "position": "Middle developer",
       "begin": "march 2011",
       "end": "december 2014",
       "tasks": ["create frontends for local services", "build DWH"]

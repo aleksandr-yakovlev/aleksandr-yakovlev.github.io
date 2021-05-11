@@ -1,0 +1,20 @@
+<% 
+    head=_.template(require('./../common/head.html').default)({htmlWebpackPlugin}),
+    header=_.template(require('./header.html').default)(),
+    footer=_.template(require('./footer.html').default)(),
+    screenTemplate=_.template(require('./screen.template.html').default),
+    screenFirst=_.template(require('./screen.first.html').default),
+    screenSecond=_.template(require('./screen.second.html').default),
+    screenThird=_.template(require('./screen.third.html').default),
+    screenFourth=_.template(require('./screen.fourth.html').default),
+    scripts=_.template(require('./../common/scripts.html').default)({htmlWebpackPlugin})
+    cv=require('../../cv.json')
+%>
+
+<%=head%>
+<%=screenFirst(cv)%>
+<%=screenTemplate({header,footer,screen:screenSecond(cv),img:"techman"})%>
+<%=screenTemplate({header,footer,screen:screenThird(cv),img:"bb8"})%>
+<%=screenTemplate({header,footer,screen:screenFourth(cv),img:"pizza"})%>
+
+<%=scripts%>
