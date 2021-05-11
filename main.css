@@ -1,249 +1,265 @@
-.JSON_viewer {
-  --color: #999;
-  --string-color: #7a3e9d;
-  --number-color: #f53232;
-  --boolean-color: #448c27;
-  --null-color: #9c5d27;
-  --property-color: #000;
-  --preview-color: #0e71b9;
-  --highlight-color: #7b0000;
-  --more-color: #999;
-}
-
-[data-theme="dark"] .JSON_viewer {
-  --color: #999;
-  --string-color: #a3eea0;
-  --number-color: #d19a66;
-  --boolean-color: #4ba7ef;
-  --null-color: #df9cf3;
-  --property-color: #6fb3d2;
-  --font-family: monaco, Consolas, "Lucida Console", monospace;
-  --preview-color: rgba(222, 175, 143, 0.9);
-  --highlight-color: #7b0000;
-  --more-color: #999;
-}
-
-.JSON_viewer {
-  display: block;
-  color: var(--color);
-  padding: 0.5rem;
-  font-family: monaco, Consolas, "Lucida Console", monospace;
-  font-size: 1rem;
-}
-
-.JSON_viewer .key {
-    color: var(--property-color);
-    display: inline-block;
-  }
-
-.JSON_viewer .value.null {
-      color: var(--null-color);
-    }
-
-.JSON_viewer .value.string {
-      color: var(--string-color);
-    }
-
-.JSON_viewer .value.number {
-      color: var(--number-color);
-    }
-
-.JSON_viewer .value.boolean {
-      color: var(--boolean-color);
-    }
-
-.JSON_viewer .value.object {
-      display: inline;
-    }
-
-.JSON_viewer ul,
-  .JSON_viewer li {
-    position: relative;
-    list-style: none;
-  }
-
-.JSON_viewer ul {
-    padding: 0;
-    clear: both;
-    margin: 0;
-  }
-
-.JSON_viewer ul:before {
-      content: "";
-      border-left: 1px solid #333;
-      position: absolute;
-      left: 0.5rem;
-      top: 0.5rem;
-      bottom: 0.5rem;
-    }
-
-.JSON_viewer ul:hover:before {
-        border-left: 1px solid #666;
-      }
-
-.JSON_viewer ul > li {
-      position: relative;
-      padding-top: 0.25rem;
-      margin-left: 2rem;
-      padding-left: 0px;
-    }
-
-.JSON_viewer ul > li:not(.switch) > .key {
-      }
-
-.JSON_viewer ul > li.switch > .key {
-          cursor: pointer;
-        }
-
-.JSON_viewer ul > li.switch > .key:before {
-            color: var(--color);
-            display: inline-block;
-            padding-right: 5px;
-            padding-left: 5px;
-            font-size: 0.7rem;
-            content: "▶";
-            transition: transform 195ms ease-in;
-            margin-left: -1rem;
-          }
-
-.JSON_viewer ul > li.switch.expanded > .key:before {
-              transform: rotate(90deg);
-            }
-
-.JSON_viewer ul > li > .hide {
-        display: none !important;
-      }
-
-.JSON_viewer ul > li > .preview .more {
-        color: var(--more-color);
-        white-space: nowrap;
-      }
-
-html,
-body,
-#root {
+.screen,
+.screen-wrapper {
   width: 100%;
-  margin: 0px;
 }
 
-html,
-body {
+.screen,
+.screen-wrapper {
   height: 100%;
 }
 
-#root {
-  --background-color: #fff;
-  --corner-fill-color: #242424;
+.screen {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  min-height: 800px;
+  max-height: 1200px;
 }
 
-#root[data-theme="dark"] {
-    --corner-fill-color: #fff;
-    --background-color: #242424;
+.screen-wrapper {
+    max-width: 1800px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
-#root {
-  background-color: var(--background-color);
-  min-height: 100%;
+.content {
+  display: flex;
+  flex: auto;
+  flex-direction: row;
+  margin-bottom: 100px;
 }
 
-.view-button-group {
-  display: inline-flex;
-  align-items: baseline;
-  flex-wrap: wrap;
+.list-head {
+    margin: 0;
+  }
+
+.list-foot {
+    margin: 0 0 30px 0;
+  }
+
+.list-foot span {
+      white-space: pre-wrap;
+      display: inline-block;
+    }
+
+.contact {
+  text-align: center;
+}
+
+.contact-text {
+    font-size: 50px;
+    margin: 0px;
+  }
+
+.first-screen {
+  background: linear-gradient(135deg, #db00a4, #853ec1 70%);
+  border-bottom: 2px solid black;
+}
+.menu {
+  align-self: flex-end;
+  font-weight: 600;
+  list-style-type: none;
+  margin: 100px 200px 0 0;
+  font-size: 14px;
+}
+.menu a {
+    text-decoration: inherit;
+    color: inherit;
+  }
+.menu li {
+    padding: 15px;
+    display: inline;
+    cursor: pointer;
+  }
+.menu .menu-light {
+    border: solid 2px black;
+    border-radius: 5px;
+  }
+.menu .icon-dwnld {
+    display: inline-block;
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+    background: url("http://aleksandr-yakovlev.surge.sh/icons/dwn.svg")
+      no-repeat;
+  }
+.menu .light-text {
+    padding-left: 3px;
+  }
+
+.img-portrait {
+  align-self: flex-end;
+  position: relative;
+}
+
+.img-portrait .img-hi {
+    left: -205px;
+    width: 250px;
+    height: 150px;
+    background: url(https://aleksandr-yakovlev.surge.sh/icons/hi.svg) no-repeat;
+    position: absolute;
+  }
+
+.img-portrait .img-src {
+    display: block;
+  }
+
+.info {
+  margin-left: 70px;
+}
+
+.info p {
+    margin: 10px;
+  }
+
+.info-name {
+    font-size: 32px;
+    font-weight: 800;
+  }
+
+.info-prof {
+    font-size: 24px;
+  }
+
+.info-badge {
+    padding-top: 30px;
+  }
+
+.info-badge a:not(:first-child) {
+      padding-left: 15px;
+    }
+
+.badge {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  content: "";
+  cursor: pointer;
+}
+
+.telegram {
+  background: url("https://aleksandr-yakovlev.surge.sh/icons/telegram.svg")
+    center center no-repeat;
+}
+
+.github {
+  background: url("https://aleksandr-yakovlev.surge.sh/icons/github.svg") center
+    center no-repeat;
+}
+
+.mail {
+  background: url("https://aleksandr-yakovlev.surge.sh/icons/mail.svg") center
+    center no-repeat;
+}
+
+.row {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 44px;
+  height: 28px;
+  background: url("https://aleksandr-yakovlev.surge.sh/icons/row.svg") center
+    center no-repeat;
+  -webkit-animation: pulse 3s infinite;
+          animation: pulse 3s infinite;
+}
+
+@-webkit-keyframes pulse {
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.right-wrapper {
+    width: 500px;
+  }
+
+.img-techman {
+  width: 563px;
+  height: 563px;
+  background: url("https://aleksandr-yakovlev.surge.sh/vector/techman.svg")
+    center center no-repeat;
+}
+
+.img-bb8 {
+  width: 400px;
+  height: 608px;
+  background: url("https://aleksandr-yakovlev.surge.sh/vector/bb8.svg") center
+    center no-repeat;
+}
+
+.img-pizza {
+  width: 400px;
+  height: 608px;
+  background: url("https://aleksandr-yakovlev.surge.sh/vector/pizza.svg") center
+    center no-repeat;
+}
+
+.oasis {
+  width: 89px;
+  height: 43px;
+  background: url("https://aleksandr-yakovlev.surge.sh/icons/oasis.svg") center
+    center no-repeat;
 }
 
 .header {
-  padding: 5px;
+  margin: 60px 0px 0px 80px;
 }
 
-.github-corner:hover .octo-arm {
-    -webkit-animation: octocat-wave 560ms ease-in-out;
-            animation: octocat-wave 560ms ease-in-out;
-  }
-
-.github-corner svg {
-    fill: var(--corner-fill-color);
-    color: var(--background-color);
-    position: absolute;
-    top: 0;
-    border: 0;
-    right: 0;
-  }
-
-@-webkit-keyframes octocat-wave {
-  0%,
-  100% {
-    transform: rotate(0);
-  }
-
-  20%,
-  60% {
-    transform: rotate(-25deg);
-  }
-
-  40%,
-  80% {
-    transform: rotate(10deg);
-  }
-}
-
-@keyframes octocat-wave {
-  0%,
-  100% {
-    transform: rotate(0);
-  }
-
-  20%,
-  60% {
-    transform: rotate(-25deg);
-  }
-
-  40%,
-  80% {
-    transform: rotate(10deg);
-  }
-}
-
-@media (max-width: 500px) {
-  .github-corner:hover .octo-arm {
-    -webkit-animation: none;
-            animation: none;
-  }
-
-  .github-corner .octo-arm {
-    -webkit-animation: octocat-wave 560ms ease-in-out;
-            animation: octocat-wave 560ms ease-in-out;
-  }
-}
-
-.view-button:not(:last-child) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
-.view-button + .view-button {
-    margin-left: 1px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-
-.view-button.checked {
-    background-color: rgba(78, 187, 255, 0.3);
-    cursor: default;
-  }
-
-.view-button {
-  display: inline-block;
-  position: relative;
-  padding: 3px 12px;
-  background: rgba(200, 200, 200, 0.2);
-  border-radius: 4px;
-  font-size: 13px;
+.home {
+  width: 20px;
+  height: 20px;
   cursor: pointer;
-  white-space: nowrap;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  background: url("https://aleksandr-yakovlev.surge.sh/icons/home.svg") center
+    center no-repeat;
+}
+
+.break {
+  height: 100%;
+  width: 100%;
+  background: url("https://aleksandr-yakovlev.surge.sh/vector/break.svg") center
+    center repeat-x;
+}
+
+.footer {
+  position: absolute;
+  bottom: -35px;
+  height: 70px;
+  width: 100%;
 }
 
