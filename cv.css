@@ -1,0 +1,137 @@
+#root {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 13px;
+}
+
+.root-wrapper {
+  width: 1200px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.root-wrapper > div {
+    padding-top: 15px;
+  }
+
+.left {
+  width: 300px;
+  background-color: #141414;
+  color: #fff;
+  padding-left: 20px;
+}
+
+.left-wrapper {
+    padding: 20px;
+  }
+
+.left-wrapper:not(:last-child) {
+      border-bottom: white 1px solid;
+    }
+
+.left-one {
+    display: flex;
+    flex-direction: column;
+  }
+
+.left-one a,
+    .left-one > div {
+      margin-bottom: 4px;
+    }
+
+.left h4 {
+    margin: 0;
+  }
+
+.left .list-foot {
+    margin-top: 3px;
+  }
+
+.right {
+  width: 800px;
+  padding: 40px;
+}
+
+.ava {
+  text-align: center;
+}
+
+.ava .img-ava {
+    border-radius: 50%;
+    border: white 2px solid;
+    width: 100px;
+  }
+
+.bage {
+  color: white;
+}
+
+.icon,
+.text {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.name {
+  margin-bottom: 5px;
+}
+
+.role {
+  margin-top: 0;
+  font-weight: normal;
+}
+
+.title {
+  border-bottom: black 1px solid;
+  padding: 15px 0px 10px 10px;
+}
+
+.circle {
+  border: black 1px solid;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  margin-left: -5px;
+}
+
+.circle-row {
+  height: 0px;
+}
+
+.circle-row td:not(:first-child) {
+    padding-left: 10px;
+  }
+
+.etable {
+  border-spacing: 0px;
+}
+
+.etable td {
+    vertical-align: top;
+  }
+
+.etable p,
+  .etable h3 {
+    margin: 0 0 3px 0;
+  }
+
+.etable tr:not(:last-child) .left-td {
+      border-left: black 1px solid;
+    }
+
+.etc tr:last-child .left-td {
+      border-left: black 1px dashed;
+    }
+
+.yr,
+.description {
+  color: gray;
+}
+
+.description {
+  size: 12px;
+  padding-bottom: 10px;
+}
+
