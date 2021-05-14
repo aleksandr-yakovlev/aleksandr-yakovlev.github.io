@@ -12,3 +12,23 @@ body {
   font-family: "Spartan", sans-serif;
   height: 100%;
 }
+
+.telegram {
+  background: url("https://aleksandr-yakovlev.surge.sh/icons/telegram.svg")
+    center center no-repeat;
+}
+
+.github {
+  background: url("https://aleksandr-yakovlev.surge.sh/icons/github.svg") center
+    center no-repeat;
+}
+
+.mail {
+  background: url("https://aleksandr-yakovlev.surge.sh/icons/mail.svg") center
+    center no-repeat;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}

@@ -1,0 +1,134 @@
+<div id="root">
+  <div class="root-wrapper">
+    <div class="left">
+     <div class="ava">
+     <img class="img-ava" src="https://aleksandr-yakovlev.surge.sh/images/ava.png"/>
+     </div>
+     <div class="left-wrapper">
+      <div class="left-one">
+        <div>
+        <span class="icon"><%=icons.location%></span>
+        <span class="text">
+          <%-cv.who.location%>
+        </span>
+        </div>
+          <a href="<%-cv.who.github%>">
+            <span class="icon"><%=icons.github%></span>
+            <span class="text">
+              <%-cv.who.github.substring(cv.who.github.lastIndexOf("/")+1)%>
+            </span>
+          </a>
+          <a href="<%-cv.who.site%>">
+            <span class="icon"><%=icons.link%></span>
+            <span class="text"><%-cv.who.site.substring(cv.who.site.lastIndexOf("/")+1)%></span>
+          </a>
+          <a href="mailto:<%-cv.who.email%>">
+            <span class="icon"><%=icons.mail%></span>
+            <span class="text"><%-cv.who.email%></span>
+          </a>
+          <a href="<%-cv.who.telegram%>">
+            <span class="icon"><%=icons.telegram%></span>
+            <span class="text"
+              ><%-cv.who.telegram.substring(cv.who.telegram.lastIndexOf("/")+1)%></span
+            >
+          </a>
+          <a href="Tel:<%-cv.who.phone%>">
+            <span class="icon"><%=icons.phone%></span>
+            <span class="text"><%-cv.who.phone%></span>
+          </a>
+        </div>
+      </div>
+    <div class="left-wrapper">
+      <div class="left-two">
+        <h3>Skills</h3>
+        <%Object.keys(cv.skills).forEach(skill => { %>
+            <h4 class="list-head"><%-skill%></h4>
+            <p class="list-foot"><span><%=cv.skills[skill].join(" </span><span>|&nbsp;")%></p>
+            <% }) %>
+      </div>
+    </div>
+      <div class="left-three"></div>
+      <div class="left-four"></div>
+    </div>
+    <div class="right">
+        <h1 class="name"><%-cv.who.name.toUpperCase()%></h2>
+        <h2 class="role"><%-cv.who.role%></h4>
+        <h3 class="title">Experience</h3>
+        <table class="etable etc">
+            <%cv.experience.forEach(e => { %>
+                <tr class="circle-row">
+                    <td>
+                        <div class="circle"></div>
+                    </td>
+                    <td rowspan="2">
+                        <p><%-e.begin%></p>
+                        <p><%-e.end%></p>
+                        <p class=yr><%-(Number.isInteger(Number(e.end)) ? e.end : new Date().getFullYear())-e.begin%> yr</p>
+                    </td>
+                    <td rowspan="2">
+                        <h3><%-e.position%> in @<%-e.company%></h3>
+                        <ul>
+                            <%e.tasks.forEach(task=> {%>
+                                <li><%-task%></li>
+                            <% }) %>
+                        </ul>
+                        <%if (e.stack) {%>
+                        <p class="description"><%-e.stack.join(", ") %></p>
+                        <% } %>
+                    </td>
+                </tr>
+                <tr class="line-row">
+                    <td class="left-td"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <% }) %>   
+        </table>
+        <h3 class="title">Courses</h3>
+            <table class="etable etc">
+            <%cv.courses.forEach(course => { %>
+                <tr class="circle-row">
+                    <td>
+                        <div class="circle"></div>
+                    </td>
+                    <td rowspan="2">
+                        <p><%-course.year%></p>
+                    </td>
+                    <td rowspan="2">
+                        <h3><%-course.title%></h3>
+                        <p><%-course.company%></p>
+                    </td>
+                </tr>
+                <tr class="line-row">
+                    <td class="left-td"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <% }) %>   
+            </table>
+         <h3 class="title">Education</h3>
+            <table class="etable">
+            <%cv.education.forEach(e => { %>
+                <tr class="circle-row">
+                    <td>
+                        <div class="circle"></div>
+                    </td>
+                    <td rowspan="2">
+                        <p><%-e.end%></p>
+                    </td>
+                    <td rowspan="2">
+                        <h3><%-e.major%></h3>
+                        <p><%-e.institution%></p>
+                        <p class="description"><%-e.level%></p>
+                    </td>
+                </tr>
+                <tr class="line-row">
+                    <td class="left-td"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <% }) %>   
+            </table>
+    </div>
+  </div>
+</div>

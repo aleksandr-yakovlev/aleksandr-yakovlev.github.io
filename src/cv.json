@@ -7,6 +7,7 @@
     "born year": 1989,
     "location": "Moscow, Russia",
     "email": "aleksandr.yakovlev@live.com",
+    "site": "https://aleksandr-yakovlev.github.io",
     "github": "https://github.com/aleksandr-yakovlev",
     "telegram": "https://t.me/stedman"
   },
@@ -29,10 +30,22 @@
     {
       "company": "Sber",
       "position": "Teamlead",
-      "begin": "2014",
+      "begin": "2020",
       "end": "present",
       "tasks": [
-        "create analytics system",
+        "develop transport system",
+        "drive development, architecture",
+        "building project team"
+      ],
+      "stack": ["React", "Postgres", "Platform V"]
+    },
+    {
+      "company": "Sber",
+      "position": "Teamlead",
+      "begin": "2015",
+      "end": "2020",
+      "tasks": [
+        "develop analytics system",
         "drive development, architecture",
         "manage a team of 10 people with intake scrum agile"
       ],
@@ -52,6 +65,13 @@
       ]
     },
     {
+      "company": "Sber",
+      "position": "Middle developer",
+      "begin": "2014",
+      "end": "2015",
+      "tasks": ["build DWH", "monitoring ITSM process", "write documentation"]
+    },
+    {
       "company": "Alfabank",
       "position": "Middle developer",
       "begin": "2011",
@@ -62,7 +82,7 @@
   "courses": [
     {
       "title": "Middle frontend developer",
-      "organization": "Yandex",
+      "company": "Yandex",
       "year": "2020"
     }
   ],

@@ -9,6 +9,7 @@ const PAGES = {
   common: path.resolve(pages, "common"),
   main: path.resolve(pages, "main"),
   geek: path.resolve(pages, "geek"),
+  cv: path.resolve(pages, "cv"),
 };
 
 module.exports = {
@@ -16,6 +17,7 @@ module.exports = {
     common: PAGES.common,
     main: PAGES.main,
     geek: PAGES.geek,
+    cv: PAGES.cv,
   },
   output: {
     path: path.resolve(__dirname, "build"),
@@ -54,9 +56,14 @@ module.exports = {
         ],
       },
       {
-        test: /\.html$/,
+        test: /\.(html|svg)$/,
         loader: "raw-loader",
         include: pages,
+      },
+      {
+        test: /\.(pdf)$/,
+        use: "file-loader?name=[path][name].[ext]",
+        exclude: /(node_modules)/,
       },
     ],
   },
@@ -87,6 +94,13 @@ module.exports = {
       filename: "geek.html",
       template: path.resolve(PAGES.geek, "template.ejs"),
       chunks: ["common", "geek"],
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: true,
+      filename: "cv.html",
+      template: path.resolve(PAGES.cv, "template.ejs"),
+      chunks: ["common", "cv"],
     }),
     new CleanWebpackPlugin(),
   ],

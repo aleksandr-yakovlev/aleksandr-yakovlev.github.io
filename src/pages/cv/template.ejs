@@ -1,0 +1,16 @@
+<% 
+    head=_.template(require('./../common/head.html').default)({htmlWebpackPlugin}),
+    cvPage=_.template(require('./cv.html').default),
+    scripts=_.template(require('./../common/scripts.html').default)({htmlWebpackPlugin})
+    cvData=require('../../cv.json')
+    telegram=require('./icons/telegram.svg').default
+    mail=require('./icons/mail.svg').default
+    github=require('./icons/github.svg').default
+    phone=require('./icons/phone.svg').default
+    link=require('./icons/link.svg').default
+    location=require('./icons/location.svg').default
+%>
+
+<%=head%>
+<%=cvPage({cv:{...cvData}, icons:{telegram,mail,github,phone,link,location}})%>
+<%=scripts%>
