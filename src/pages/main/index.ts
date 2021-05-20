@@ -3,7 +3,6 @@ import "./screens/style.first.css";
 import "./screens/style.template.css";
 import "./style.header.css";
 import "./style.footer.css";
-import cv from "../../cv.pdf";
 
 [...document.getElementsByClassName("home")].forEach((home) => {
   home.addEventListener("click", () => {
