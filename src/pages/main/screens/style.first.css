@@ -3,19 +3,25 @@
   border-bottom: 2px solid black;
 }
 .menu {
+  display: flex;
+  align-items: center;
   align-self: flex-end;
   font-weight: 600;
   list-style-type: none;
   margin: 100px 200px 0 0;
   font-size: 14px;
   & li {
-    padding: 15px;
+    margin: 15px;
     display: inline;
     cursor: pointer;
   }
   & .menu-light {
     border: solid 2px black;
     border-radius: 5px;
+    & .link {
+      display: inline-block;
+      padding: 15px;
+    }
   }
   & .icon-dwnld {
     display: inline-block;
