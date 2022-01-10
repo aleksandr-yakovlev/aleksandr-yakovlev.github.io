@@ -1,9 +1,8 @@
 {
-  "who": {
+  "about": {
     "name": "Aleksandr Yakovlev",
-    "role": "Software Engineer",
-    "bio": "I like engineering challenges, passionate in web technologies, performance, frontend architecture and related subjects",
-    "hobby": "I love 🏂 #mountains #snowboard",
+    "role": ["CTO", "Software architect"],
+    "bio": "IT enthusiast with 5+ years leadership experience in bringing product ideas to launch. Managing agile teams which are geographically distributed. I like engineering challenges, passionate in technologies, performance and architecture.",
     "born year": 1989,
     "location": "Moscow, Russia",
     "email": "aleksandr.yakovlev@live.com",
@@ -12,81 +11,110 @@
     "telegram": "https://t.me/stedman",
     "phone": "+7 (963) 200-08-09"
   },
-  "skills": {
-    "Frontend": ["ES6/ES7", "TS", "React", "Node.js", "Jest", "Webpack", "Git"],
-    "Data": [
-      "Spark",
-      "Kafka",
-      "Postgress",
-      "ClickHouse",
-      "Greenplum",
-      "ELK",
-      "Oracle/GG",
-      "MS"
-    ],
-    "DevOps": ["Linux", "Docker", "OpenShift"],
-    "Management": ["Agile", "ITSM", "Motivation", "Building project team"]
+  "summary of experience": {
+    "leadership": "since 2015",
+    "software development": "since 2010"
   },
   "experience": [
     {
       "company": "Sber",
-      "position": "Teamlead",
-      "begin": "2020",
-      "end": "present",
-      "tasks": [
-        "develop transport system",
-        "drive development, architecture",
-        "building project team"
-      ],
-      "stack": ["React", "Postgres", "Platform V"]
-    },
-    {
-      "company": "Sber",
-      "position": "Teamlead",
-      "begin": "2015",
-      "end": "2020",
-      "tasks": [
-        "develop analytics system",
-        "drive development, architecture",
-        "manage a team of 10 people with intake scrum agile"
-      ],
-      "stack": [
-        "React",
-        "Node.js",
-        "LoopBack",
-        "Kafka",
-        "ClickHouse",
-        "Greenplum",
-        "Elasticsearch",
-        "NiFi",
-        "Oracle GG",
-        "Docker",
-        "Traefik",
-        "Keycloak"
-      ]
-    },
-    {
-      "company": "Sber",
-      "position": "Middle developer",
       "begin": "2014",
-      "end": "2015",
-      "tasks": ["build DWH", "monitoring ITSM process", "write documentation"]
+      "end": "present",
+      "products": [
+        {
+          "name": "Regional control center",
+          "role": "Teamlead",
+          "begin": "2021",
+          "end": "present",
+          "tasks": [
+            "revision of architecture",
+            "transition to SaaS",
+            "bringing ETL and BI",
+            "prepare for a production"
+          ]
+        },
+        {
+          "name": "Products based on RegTech platform",
+          "role": "Solution Architect",
+          "begin": "2021",
+          "end": "present",
+          "tasks": [
+            "designing architecture",
+            "platform consultation",
+            "technical audit of a frontend app"
+          ]
+        },
+        {
+          "name": "Intelligent transport system",
+          "role": "Teamlead",
+          "begin": "2020",
+          "end": "2021",
+          "tasks": [
+            "creating POCs",
+            "research of partner solutions",
+            "building a development teams"
+          ]
+        },
+        {
+          "name": "Analytical performance monitoring system",
+          "role": "Teamlead",
+          "begin": "2015",
+          "end": "2020",
+          "tasks": [
+            "bringing product ideas to launch",
+            "designing architecture",
+            "implementing of support according to ITIL standards",
+            "transition to cloud-native architecture",
+            "transform to agile",
+            "full HR-cycle"
+          ],
+          "stack": [
+            "React",
+            "Node.js",
+            "ClickHouse",
+            "Greenplum",
+            "ELK",
+            "Kafka",
+            "NiFi",
+            "OpenShift",
+            "Keycloak"
+          ]
+        }
+      ]
     },
     {
       "company": "Alfabank",
       "position": "Middle developer",
       "begin": "2011",
       "end": "2014",
-      "tasks": ["create frontends for local services", "build DWH"]
+      "tasks": [
+        "develop DWH",
+        "develop frontends for local services",
+        "building support processes based on ITIL"
+      ]
     }
   ],
-  "courses": [
-    {
-      "title": "Middle frontend developer",
-      "company": "Yandex",
-      "year": "2020"
-    }
-  ],
+  "skills": {
+    "management": [
+      "Agile",
+      "ITSM",
+      "Research & Strategy",
+      "Public Speaking",
+      "Flexibility"
+    ],
+    "frontend": ["ES6/ES7", "TS", "React", "Node.js", "Jest", "Webpack", "Git"],
+    "data": [
+      "Kafka",
+      "Postgress",
+      "ClickHouse",
+      "Greenplum",
+      "ELK",
+      "Spark",
+      "Oracle/GG",
+      "MS"
+    ],
+    "devOps": ["Linux", "Docker", "OpenShift"]
+  },
   "education": [
     {
       "institution": "Northern (Arctic) Federal University named after M.V. Lomonosov",
@@ -102,5 +130,11 @@
       "level": "College",
       "end": "2009"
     }
+  ],
+  "interest": [
+    "🏂 Snowboard",
+    "🏊 Swimming",
+    "🛫 Traveling",
+    "💻 Computer science"
   ]
 }
