@@ -83,15 +83,20 @@
         <h1 class="name"><%-cv.about.name.toUpperCase()%></h2>
         <h2 class="role"><%-cv.about.role.join(', ')%></h2>
         <p class="bio"><%-cv.about.bio%></p>
-        <h3 class="title">Experience</h3>
+        <%
+          const expLen = cv.experience.length-1
+          const posLen = cv.experience[expLen].positions.length-1
+        %>
+        <h3 class="title">Experience <span class="description"> · <%-(Number.isInteger(Number(cv.experience[0].positions[0].end)) ? cv.experience[0].positions[0].end : new Date().getFullYear())-cv.experience[expLen].positions[posLen].begin%> yr</span></h3>
           <%cv.experience.forEach(({company, positions}) => { 
             const len = positions?.length - 1
           %>
             <h3 class="company">
-              <a href="<%-company.site%>">
+              <%=company.site && `<a href="${company.site}">`%>
                 <span><%=company.name%></span><span class="description"> · <%-(Number.isInteger(Number(positions[0].end)) ? positions[0].end : new Date().getFullYear())-positions[len].begin%> yr</span>
-              </a>
+              <%=company.site && "</a>"%>
             </h3>
+            <%if (positions?.length > 1 ) {%>
             <table class="etable">
               <%positions?.forEach(({role, product, begin, end, tasks}, i) => { %>
                 <tr class="text-row"> 
@@ -116,7 +121,14 @@
                 </tr>
             <% }) %> 
           </table>
-        <% }) %>   
+        <% } else {%>   
+          <ul>
+            <%positions[0].tasks.forEach(task=> {%>
+              <li><%-task%></li>
+             <% }) %>
+          </ul>
+        <% } %>
+        <% }) %>  
          <h3 class="title">Education</h3>
             <%cv.education.forEach(({institution, programmes}) => { %>
               <h3 class="company">

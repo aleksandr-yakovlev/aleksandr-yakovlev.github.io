@@ -6,7 +6,7 @@ const puppeteer = require("puppeteer");
   await page.goto("https://aleksandr-yakovlev.github.io/cv.html", {
     waitUntil: "networkidle2",
   });
-  await page.pdf({ path: "./src/cv.pdf", scale: 0.69, printBackground: true });
+  await page.pdf({ path: "./cv.pdf", scale: 0.69, printBackground: true });
 
   await browser.close();
 })();

@@ -85,8 +85,8 @@
       "positions": [
         {
           "role": "Middle developer",
-          "begin": "2012",
-          "end": "2014",
+          "begin": "2013",
+          "end": "2015",
           "tasks": [
             "develop DWH",
             "develop frontends for local services",
@@ -96,12 +96,26 @@
         {
           "role": "Middle engineer",
           "begin": "2011",
-          "end": "2012",
+          "end": "2013",
           "tasks": [
             "building support processes on local offices",
             "interaction with contractors",
             "IT budget management",
             "infrastructure managment and IT setup for new offices"
+          ]
+        }
+      ]
+    },
+    {
+      "company": { "name": "Previous experience" },
+      "positions": [
+        {
+          "begin": "2008",
+          "end": "2011",
+          "tasks": [
+            "support on local offices",
+            "IT budget management",
+            "outsourcing"
           ]
         }
       ]
@@ -140,14 +154,14 @@
         {
           "department": "Institute of Information and Space Technologies",
           "major": "Information Systems and Technologies",
-          "level": "Developer (university)",
+          "level": "Developer (University)",
           "begin": "2009",
           "end": "2012"
         },
         {
           "department": "College of Telecommunications and Information Technology",
           "major": "Сomputer Software",
-          "level": "Developer (college)",
+          "level": "Developer (College)",
           "begin": "2006",
           "end": "2009"
         }
