@@ -1,0 +1,79 @@
+<div class="screen first-screen">
+  <div class="screen-wrapper">
+    <menu class="menu">
+      <li><a href="#intro">Intro</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li title="Switch to JSON view"><a href="/geek.html">Geek</a></li>
+      <li class="menu-light">
+        <a href="<%=pdf%>" target="_blank" class="link">
+          <div>
+            <span class="icon-dwnld"></span>
+            <span class="light-text"> Get CV</span>
+          </div>
+        </a>
+      </li>
+    </menu>
+    <div class="info">
+      <p class="info-name">Aleksandr Yakovlev</p>
+      <p class="info-prof"><%-cv.about.role.join(", ")%></p>
+      <%=badge%>
+    </div>
+    <div class="row"></div>
+    <div class="img-portrait">
+      <div class="img-hi"></div>
+      <picture>
+        <source
+          type="image/webp"
+          srcset="
+            https://aleksandr-yakovlev.surge.sh/images/portrait.mobile.webp    1x,
+            https://aleksandr-yakovlev.surge.sh/images/portrait.mobile@2x.webp 2x,
+            https://aleksandr-yakovlev.surge.sh/images/portrait.mobile@3x.webp 3x
+          "
+          media="(max-width: 600px)"
+        />
+        <source
+          srcset="
+            https://aleksandr-yakovlev.surge.sh/images/portrait.mobile.png    1x,
+            https://aleksandr-yakovlev.surge.sh/images/portrait.mobile@2x.png 2x,
+            https://aleksandr-yakovlev.surge.sh/images/portrait.mobile@3x.png 3x
+          "
+          media="(max-width: 600px)"
+        />
+        <source
+          type="image/webp"
+          srcset="
+            https://aleksandr-yakovlev.surge.sh/images/portrait.webp    1x,
+            https://aleksandr-yakovlev.surge.sh/images/portrait@2x.webp 2x,
+            https://aleksandr-yakovlev.surge.sh/images/portrait@3x.webp 3x
+          "
+          media="(max-width: 1800px)"
+        />
+        <source
+          srcset="
+            https://aleksandr-yakovlev.surge.sh/images/portrait.png    1x,
+            https://aleksandr-yakovlev.surge.sh/images/portrait@2x.png 2x,
+            https://aleksandr-yakovlev.surge.sh/images/portrait@3x.png 3x
+          "
+          media="(max-width: 1800px)"
+        />
+        <source
+          type="image/webp"
+          srcset="
+            https://aleksandr-yakovlev.surge.sh/images/portrait.full.webp    1x,
+            https://aleksandr-yakovlev.surge.sh/images/portrait.full@2x.webp 2x,
+            https://aleksandr-yakovlev.surge.sh/images/portrait.full@3x.webp 3x
+          "
+        />
+        <img
+          class="img-src"
+          srcset="
+            https://aleksandr-yakovlev.surge.sh/images/portrait.full.png    1x,
+            https://aleksandr-yakovlev.surge.sh/images/portrait.full@2x.png 2x,
+            https://aleksandr-yakovlev.surge.sh/images/portrait.full@3x.png 3x
+          "
+        />
+      </picture>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,182 @@
+{
+  "about": {
+    "name": "Aleksandr Yakovlev",
+    "role": ["CTO", "Solution architect"],
+    "bio": "IT enthusiast with 5+ years leadership experience in bringing product ideas to launch. Managing agile teams which are geographically distributed. I like engineering challenges, passionate in technologies, performance and architecture. Open to relocation on a global level.",
+    "born year": 1989,
+    "location": "Moscow, Russia",
+    "email": "aleksandr.yakovlev@live.com",
+    "site": "https://aleksandr-yakovlev.github.io",
+    "github": "https://github.com/aleksandr-yakovlev",
+    "telegram": "https://t.me/stedman",
+    "phone": "+7 (963) 200-08-09"
+  },
+  "summary": {
+    "leadership": "since 2015",
+    "software development": "since 2010"
+  },
+  "experience": [
+    {
+      "company": { "name": "Sber", "site": "https://sber.ru/" },
+      "positions": [
+        {
+          "product": "Regional control center",
+          "role": "Teamlead",
+          "begin": "2021",
+          "end": "present",
+          "tasks": [
+            "revision of architecture",
+            "transition to SaaS",
+            "bringing ETL and BI",
+            "prepare for a production"
+          ]
+        },
+        {
+          "product": "Products based on RegTech platform",
+          "role": "Solution Architect",
+          "begin": "2021",
+          "end": "present",
+          "tasks": [
+            "designing architecture",
+            "platform consultation",
+            "technical audit of a frontend app"
+          ]
+        },
+        {
+          "product": "Intelligent transport system",
+          "role": "Teamlead",
+          "begin": "2020",
+          "end": "2021",
+          "tasks": [
+            "creating POCs",
+            "research of partner solutions",
+            "building a development teams"
+          ]
+        },
+        {
+          "product": "Analytical performance monitoring system",
+          "role": "Teamlead",
+          "begin": "2015",
+          "end": "2020",
+          "tasks": [
+            "bringing product ideas to launch",
+            "designing architecture",
+            "implementing of support according to ITIL standards",
+            "transition to cloud-native architecture",
+            "transform to agile",
+            "full HR-cycle"
+          ],
+          "stack": [
+            "React",
+            "Node.js",
+            "ClickHouse",
+            "Greenplum",
+            "ELK",
+            "Kafka",
+            "NiFi",
+            "OpenShift",
+            "Keycloak"
+          ]
+        }
+      ]
+    },
+    {
+      "company": { "name": "Alfabank", "site": "https://alfabank.com/" },
+      "positions": [
+        {
+          "role": "Middle developer",
+          "begin": "2013",
+          "end": "2015",
+          "tasks": [
+            "develop DWH",
+            "develop frontends for local services",
+            "building support processes based on ITIL"
+          ]
+        },
+        {
+          "role": "Middle engineer",
+          "begin": "2011",
+          "end": "2013",
+          "tasks": [
+            "building support processes on local offices",
+            "interaction with contractors",
+            "IT budget management",
+            "infrastructure managment and IT setup for new offices"
+          ]
+        }
+      ]
+    },
+    {
+      "company": { "name": "Previous experience" },
+      "positions": [
+        {
+          "begin": "2008",
+          "end": "2011",
+          "tasks": [
+            "support on local offices",
+            "IT budget management",
+            "outsourcing"
+          ]
+        }
+      ]
+    }
+  ],
+  "skills": {
+    "Management": [
+      "Research & Strategy",
+      "Public Speaking",
+      "Flexibility",
+      "Agile",
+      "ITSM"
+    ],
+    "Frontend": ["ES6/ES7", "TS", "React", "Node.js", "Jest", "Webpack", "Git"],
+    "Data": [
+      "Data Vault",
+      "Streaming",
+      "Cleansing",
+      "Visualization",
+      "Kafka",
+      "ClickHouse",
+      "Greenplum",
+      "ELK",
+      "Spark",
+      "Ni-fi"
+    ],
+    "DevOps": ["Linux", "Docker", "OpenShift"]
+  },
+  "education": [
+    {
+      "institution": {
+        "name": "Northern (Arctic) Federal University named after M.V. Lomonosov",
+        "site": "https://narfu.ru/en/"
+      },
+      "programmes": [
+        {
+          "department": "Institute of Information and Space Technologies",
+          "major": "Information Systems and Technologies",
+          "level": "Developer (University)",
+          "begin": "2009",
+          "end": "2012"
+        },
+        {
+          "department": "College of Telecommunications and Information Technology",
+          "major": "Сomputer Software",
+          "level": "Developer (College)",
+          "begin": "2006",
+          "end": "2009"
+        }
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "rank": "Limited working proficiency"
+    },
+    {
+      "language": "Russian",
+      "rank": "Native"
+    }
+  ],
+  "interests": ["Snowboard", "Swimming", "Traveling", "Computer science"]
+}

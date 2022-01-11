@@ -1,0 +1,163 @@
+<div id="root">
+  <div class="root-wrapper">
+    <div class="left">
+     <div class="ava">
+     <img class="img-ava" src="https://aleksandr-yakovlev.surge.sh/images/ava.png"/>
+     </div>
+     <div class="left-wrapper">
+      <div class="left-one">
+        <a href="https://www.google.ru/maps/search/<%-cv.about.location%>">
+        <span class="icon"><%=icons.location%></span>
+        <span class="text">
+          <%-cv.about.location%>
+        </span>
+        </a>
+          <a href="<%-cv.about.github%>">
+            <span class="icon"><%=icons.github%></span>
+            <span class="text">
+              <%-cv.about.github.substring(cv.about.github.lastIndexOf("/")+1)%>
+            </span>
+          </a>
+          <a href="<%-cv.about.site%>">
+            <span class="icon"><%=icons.link%></span>
+            <span class="text"><%-cv.about.site.substring(cv.about.site.lastIndexOf("/")+1)%></span>
+          </a>
+          <a href="mailto:<%-cv.about.email%>">
+            <span class="icon"><%=icons.mail%></span>
+            <span class="text"><%-cv.about.email%></span>
+          </a>
+          <a href="<%-cv.about.telegram%>">
+            <span class="icon"><%=icons.telegram%></span>
+            <span class="text"
+              ><%-cv.about.telegram.substring(cv.about.telegram.lastIndexOf("/")+1)%></span
+            >
+          </a>
+          <a href="Tel:<%-cv.about.phone%>">
+            <span class="icon"><%=icons.phone%></span>
+            <span class="text"><%-cv.about.phone%></span>
+          </a>
+        </div>
+      </div>
+      <div class="left-wrapper">
+        <div class="left-two"></div>
+          <h3>Skills</h3>
+            <%Object.keys(cv.skills).forEach(skill => { %>
+              <h4 class="list-head"><%-skill%></h4>
+              <p class="list-foot"><span><%=cv.skills[skill].join(" </span><span>|&nbsp;")%></p>
+            <% }) %>
+      </div>
+      <div class="left-wrapper">
+        <div class="left-languages">
+          <h3>Languages</h3>
+            <table class="languages-table">
+              <%for (i=0; i<cv.languages.length;i+=2) { %>
+                <tr>
+                  <td>
+                    <p><%-cv.languages[i].language%></p>
+                    <p class="description"><%-cv.languages[i].rank%></p>
+                  </td>
+                  <td>
+                    <p><%-cv.languages[i+1].language%></p>
+                    <p class="description"><%-cv.languages[i+1].rank%></p>
+                  </td>
+                </tr>
+              <% } %>
+            </table>
+        </div>
+      </div>
+      <div class="left-wrapper">
+        <div class="left-four">
+          <h3>Interests</h3>
+            <table class="interests-table">
+              <%for (i=0; i<cv.interests.length;i+=2) { %>
+                <tr>
+                  <td><%=cv.interests[i]%></td>
+                  <td><%=cv.interests[i+1]%></td> 
+                </tr>
+              <% } %>
+            </table>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+        <h1 class="name"><%-cv.about.name.toUpperCase()%></h2>
+        <h2 class="role"><%-cv.about.role.join(', ')%></h2>
+        <p class="bio"><%-cv.about.bio%></p>
+        <%
+          const expLen = cv.experience.length-1
+          const posLen = cv.experience[expLen].positions.length-1
+        %>
+        <h3 class="title">Experience <span class="description"> · <%-(Number.isInteger(Number(cv.experience[0].positions[0].end)) ? cv.experience[0].positions[0].end : new Date().getFullYear())-cv.experience[expLen].positions[posLen].begin%> yr</span></h3>
+          <%cv.experience.forEach(({company, positions}) => { 
+            const len = positions?.length - 1
+          %>
+            <h3 class="company">
+              <%=company.site && `<a href="${company.site}">`%>
+                <span><%=company.name%></span><span class="description"> · <%-(Number.isInteger(Number(positions[0].end)) ? positions[0].end : new Date().getFullYear())-positions[len].begin%> yr</span>
+              <%=company.site && "</a>"%>
+            </h3>
+            <%if (positions?.length > 1 ) {%>
+            <table class="etable">
+              <%positions?.forEach(({role, product, begin, end, tasks}, i) => { %>
+                <tr class="text-row"> 
+                  <td  <%if (i!==0) {%>class="left-td"<% } %>></td>
+                  <td rowspan="3">
+                    <h3><%-role%><%=product && `<span class="description"> · ${product}</span>`%></h3>
+                    <p class="description"><%=begin%> - <%=end%> · <%-(Number.isInteger(Number(end)) ? end : new Date().getFullYear())-begin%> yr</p>
+                    <ul>
+                      <%tasks.forEach(task=> {%>
+                        <li><%-task%></li>
+                       <% }) %>
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="circle-row">
+                  <td>
+                    <div class="circle"></div>
+                </td>
+              </tr>
+                <tr class="line-row">
+                  <td class="left-td"></td>
+                </tr>
+            <% }) %> 
+          </table>
+        <% } else {%>   
+          <ul>
+            <%positions[0].tasks.forEach(task=> {%>
+              <li><%-task%></li>
+             <% }) %>
+          </ul>
+        <% } %>
+        <% }) %>  
+         <h3 class="title">Education</h3>
+            <%cv.education.forEach(({institution, programmes}) => { %>
+              <h3 class="company">
+                <a href="<%-institution.site%>">
+                 <span><%=institution.name%></span>
+                </a>
+              </h3>
+              <table class="etable">
+                <%programmes.forEach(({major, end, level},i) => { %>
+                  <tr class="text-row"> 
+                    <td  <%if (i!==0) {%>class="left-td"<% } %>></td>
+                    <td rowspan="3">
+                      <h3>
+                        <%-major%><span class="description"><%=` · ${end}`%></span>
+                      </h3>
+                      <p class="description"><%-level%></p>
+                    </td>
+                  </tr>
+                  <tr class="circle-row">
+                    <td>
+                      <div class="circle"></div>
+                  </td>
+                </tr>
+                  <tr class="line-row">
+                    <td class="left-td"></td>
+                  </tr>
+              <% }) %>   
+              </table>
+            <% }) %>   
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+.JSON_viewer {
+  --color: #999;
+  --string-color: #7a3e9d;
+  --number-color: #f53232;
+  --boolean-color: #448c27;
+  --null-color: #9c5d27;
+  --property-color: #000;
+  --preview-color: #0e71b9;
+  --highlight-color: #7b0000;
+  --more-color: #999;
+  --border-left-color: #e8e8e8;
+  --border-left-hover-color: #b9b9b9;
+}

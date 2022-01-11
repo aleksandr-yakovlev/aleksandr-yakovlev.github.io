@@ -1,0 +1,86 @@
+#root {
+  --background-color: #fff;
+  --corner-fill-color: #242424;
+  &[data-theme="dark"] {
+    --corner-fill-color: #fff;
+    --background-color: #242424;
+  }
+  background-color: var(--background-color);
+  min-height: 100%;
+}
+
+.view-button-group {
+  display: inline-flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.header {
+  padding: 5px;
+}
+
+.github-corner {
+  &:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+  svg {
+    fill: var(--corner-fill-color);
+    color: var(--background-color);
+    position: absolute;
+    top: 0;
+    border: 0;
+    right: 0;
+  }
+}
+
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .github-corner:hover .octo-arm {
+    animation: none;
+  }
+
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+}
+
+.view-button {
+  &:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  & + .view-button {
+    margin-left: 1px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  &.checked {
+    background-color: rgba(78, 187, 255, 0.3);
+    cursor: default;
+  }
+  display: inline-block;
+  position: relative;
+  padding: 3px 12px;
+  background: rgba(200, 200, 200, 0.2);
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+}

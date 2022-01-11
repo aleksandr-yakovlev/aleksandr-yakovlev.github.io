@@ -1,0 +1,13 @@
+.break {
+  height: 100%;
+  width: 100%;
+  background: url("https://aleksandr-yakovlev.surge.sh/vector/break.svg") center
+    center repeat-x;
+}
+
+.footer {
+  position: absolute;
+  bottom: -35px;
+  height: 70px;
+  width: 100%;
+}

@@ -1,0 +1,11 @@
+.header {
+  margin: 60px 0px 0px 80px;
+}
+
+.home {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background: url("https://aleksandr-yakovlev.surge.sh/icons/home.svg") center
+    center no-repeat;
+}
