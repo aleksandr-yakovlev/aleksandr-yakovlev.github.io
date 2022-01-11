@@ -42,7 +42,7 @@
         <div class="left-two"></div>
           <h3>Skills</h3>
             <%Object.keys(cv.skills).forEach(skill => { %>
-              <h4 class="list-head"><%-skill[0].toUpperCase() + skill.slice(1)%></h4>
+              <h4 class="list-head"><%-skill%></h4>
               <p class="list-foot"><span><%=cv.skills[skill].join(" </span><span>|&nbsp;")%></p>
             <% }) %>
       </div>

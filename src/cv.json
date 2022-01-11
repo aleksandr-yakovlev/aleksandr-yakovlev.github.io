@@ -122,15 +122,15 @@
     }
   ],
   "skills": {
-    "management": [
+    "Management": [
       "Research & Strategy",
       "Public Speaking",
       "Flexibility",
       "Agile",
       "ITSM"
     ],
-    "frontend": ["ES6/ES7", "TS", "React", "Node.js", "Jest", "Webpack", "Git"],
-    "data": [
+    "Frontend": ["ES6/ES7", "TS", "React", "Node.js", "Jest", "Webpack", "Git"],
+    "Data": [
       "Data Vault",
       "Streaming",
       "Cleansing",
@@ -142,7 +142,7 @@
       "Spark",
       "Ni-fi"
     ],
-    "devOps": ["Linux", "Docker", "OpenShift"]
+    "DevOps": ["Linux", "Docker", "OpenShift"]
   },
   "education": [
     {
