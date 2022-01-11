@@ -1,8 +1,8 @@
 {
   "about": {
     "name": "Aleksandr Yakovlev",
-    "role": ["CTO", "Software architect"],
-    "bio": "IT enthusiast with 5+ years leadership experience in bringing product ideas to launch. Managing agile teams which are geographically distributed. I like engineering challenges, passionate in technologies, performance and architecture.",
+    "role": ["CTO", "Solution architect"],
+    "bio": "IT enthusiast with 5+ years leadership experience in bringing product ideas to launch. Managing agile teams which are geographically distributed. I like engineering challenges, passionate in technologies, performance and architecture. Open to relocation on a global level.",
     "born year": 1989,
     "location": "Moscow, Russia",
     "email": "aleksandr.yakovlev@live.com",
@@ -11,18 +11,16 @@
     "telegram": "https://t.me/stedman",
     "phone": "+7 (963) 200-08-09"
   },
-  "summary of experience": {
+  "summary": {
     "leadership": "since 2015",
     "software development": "since 2010"
   },
   "experience": [
     {
-      "company": "Sber",
-      "begin": "2014",
-      "end": "present",
-      "products": [
+      "company": { "name": "Sber", "site": "https://sber.ru/" },
+      "positions": [
         {
-          "name": "Regional control center",
+          "product": "Regional control center",
           "role": "Teamlead",
           "begin": "2021",
           "end": "present",
@@ -34,7 +32,7 @@
           ]
         },
         {
-          "name": "Products based on RegTech platform",
+          "product": "Products based on RegTech platform",
           "role": "Solution Architect",
           "begin": "2021",
           "end": "present",
@@ -45,7 +43,7 @@
           ]
         },
         {
-          "name": "Intelligent transport system",
+          "product": "Intelligent transport system",
           "role": "Teamlead",
           "begin": "2020",
           "end": "2021",
@@ -56,7 +54,7 @@
           ]
         },
         {
-          "name": "Analytical performance monitoring system",
+          "product": "Analytical performance monitoring system",
           "role": "Teamlead",
           "begin": "2015",
           "end": "2020",
@@ -83,58 +81,88 @@
       ]
     },
     {
-      "company": "Alfabank",
-      "position": "Middle developer",
-      "begin": "2011",
-      "end": "2014",
-      "tasks": [
-        "develop DWH",
-        "develop frontends for local services",
-        "building support processes based on ITIL"
+      "company": { "name": "Alfabank", "site": "https://alfabank.com/" },
+      "positions": [
+        {
+          "role": "Middle developer",
+          "begin": "2012",
+          "end": "2014",
+          "tasks": [
+            "develop DWH",
+            "develop frontends for local services",
+            "building support processes based on ITIL"
+          ]
+        },
+        {
+          "role": "Middle engineer",
+          "begin": "2011",
+          "end": "2012",
+          "tasks": [
+            "building support processes on local offices",
+            "interaction with contractors",
+            "IT budget management",
+            "infrastructure managment and IT setup for new offices"
+          ]
+        }
       ]
     }
   ],
   "skills": {
     "management": [
-      "Agile",
-      "ITSM",
       "Research & Strategy",
       "Public Speaking",
-      "Flexibility"
+      "Flexibility",
+      "Agile",
+      "ITSM"
     ],
     "frontend": ["ES6/ES7", "TS", "React", "Node.js", "Jest", "Webpack", "Git"],
     "data": [
+      "Data Vault",
+      "Streaming",
+      "Cleansing",
+      "Visualization",
       "Kafka",
-      "Postgress",
       "ClickHouse",
       "Greenplum",
       "ELK",
       "Spark",
-      "Oracle/GG",
-      "MS"
+      "Ni-fi"
     ],
     "devOps": ["Linux", "Docker", "OpenShift"]
   },
   "education": [
     {
-      "institution": "Northern (Arctic) Federal University named after M.V. Lomonosov",
-      "department": "Institute of Information and Space Technologies",
-      "major": "Information Systems and Technologies",
-      "level": "Engineer",
-      "end": "2012"
-    },
-    {
-      "institution": "Northern (Arctic) Federal University named after M.V. Lomonosov",
-      "department": "College of Telecommunications and Information Technology",
-      "major": "Information Systems and Technologies",
-      "level": "College",
-      "end": "2009"
+      "institution": {
+        "name": "Northern (Arctic) Federal University named after M.V. Lomonosov",
+        "site": "https://narfu.ru/en/"
+      },
+      "programmes": [
+        {
+          "department": "Institute of Information and Space Technologies",
+          "major": "Information Systems and Technologies",
+          "level": "Developer (university)",
+          "begin": "2009",
+          "end": "2012"
+        },
+        {
+          "department": "College of Telecommunications and Information Technology",
+          "major": "Сomputer Software",
+          "level": "Developer (college)",
+          "begin": "2006",
+          "end": "2009"
+        }
+      ]
     }
   ],
-  "interest": [
-    "🏂 Snowboard",
-    "🏊 Swimming",
-    "🛫 Traveling",
-    "💻 Computer science"
-  ]
+  "languages": [
+    {
+      "language": "English",
+      "rank": "Limited working proficiency"
+    },
+    {
+      "language": "Russian",
+      "rank": "Native"
+    }
+  ],
+  "interests": ["Snowboard", "Swimming", "Traveling", "Computer science"]
 }
