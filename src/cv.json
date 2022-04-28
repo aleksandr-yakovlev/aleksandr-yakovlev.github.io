@@ -1,7 +1,7 @@
 {
   "about": {
     "name": "Aleksandr Yakovlev",
-    "role": ["CTO", "Solution architect"],
+    "role": ["Teamlead", "Solution architect"],
     "bio": "IT enthusiast with 5+ years leadership experience in bringing product ideas to launch. Managing agile teams which are geographically distributed. I like engineering challenges, passionate in technologies, performance and architecture. Open to relocation on a global level.",
     "born year": 1989,
     "location": "Moscow, Russia",
@@ -26,13 +26,15 @@
           "end": "present",
           "tasks": [
             "revision of architecture",
+            "leading frontend develop",
             "transition to SaaS",
             "bringing ETL and BI",
             "prepare for a production"
-          ]
+          ],
+          "stack": ["React", "Java/Spring", "Superset", "Platform V"]
         },
         {
-          "product": "Products based on RegTech platform",
+          "product": "Products based on platform V",
           "role": "Solution Architect",
           "begin": "2021",
           "end": "present",
@@ -40,7 +42,8 @@
             "designing architecture",
             "platform consultation",
             "technical audit of a frontend app"
-          ]
+          ],
+          "stack": ["React", "Java/Spring", "Platform V"]
         },
         {
           "product": "Intelligent transport system",
@@ -50,8 +53,9 @@
           "tasks": [
             "creating POCs",
             "research of partner solutions",
-            "building a development teams"
-          ]
+            "building development teams"
+          ],
+          "stack": ["React", "Node.js", "Postgress"]
         },
         {
           "product": "Analytical performance monitoring system",
@@ -67,7 +71,7 @@
             "full HR-cycle"
           ],
           "stack": [
-            "React",
+            "JS/React",
             "Node.js",
             "ClickHouse",
             "Greenplum",
@@ -101,7 +105,7 @@
             "building support processes on local offices",
             "interaction with contractors",
             "IT budget management",
-            "infrastructure managment and IT setup for new offices"
+            "infrastructure management and IT setup for new offices"
           ]
         }
       ]
@@ -142,7 +146,7 @@
       "Spark",
       "Ni-fi"
     ],
-    "DevOps": ["Linux", "Docker", "OpenShift"]
+    "DevOps": ["Cloud-Native", "Linux", "Kubernetes", "OpenShift", "Jenkins"]
   },
   "education": [
     {
@@ -171,7 +175,7 @@
   "languages": [
     {
       "language": "English",
-      "rank": "Limited working proficiency"
+      "rank": "Minimum Professional Proficiency"
     },
     {
       "language": "Russian",
