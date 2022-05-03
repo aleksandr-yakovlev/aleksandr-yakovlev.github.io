@@ -1,5 +1,14 @@
 body {
-  min-width: 1100px;
+  min-width: 300px;
+  > div {
+    &:not(:first-of-type):not(:last-of-type) {
+      min-height: calc(100% + 35px);
+    }
+    &:first-of-type,
+    &:last-of-type {
+      min-height: 100%;
+    }
+  }
 }
 
 .screen,
@@ -7,32 +16,27 @@ body {
   width: 100%;
 }
 
-.screen,
-.screen-wrapper {
-  height: 100%;
-}
-
 .screen {
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: space-between;
   position: relative;
-  min-height: 800px;
-  max-height: 1200px;
   &-wrapper {
-    max-width: 1800px;
-    display: flex;
+    height: 100%;
     position: relative;
     flex-direction: column;
     justify-content: space-between;
+    display: flex;
+    max-width: 1800px;
   }
 }
 
 .content {
+  padding: 0 20px;
   display: flex;
   flex: auto;
   flex-direction: row;
-  margin-bottom: 100px;
 }
 
 .list {
@@ -40,7 +44,7 @@ body {
     margin: 0;
   }
   &-foot {
-    margin: 0 0 30px 0;
+    margin-right: 30px;
     & span {
       white-space: pre-wrap;
       display: inline-block;

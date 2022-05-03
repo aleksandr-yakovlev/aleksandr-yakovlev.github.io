@@ -1,43 +1,19 @@
-.left {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .right {
-  width: 50%;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   font-size: 20px;
   line-height: 1.5;
+  text-align: justify;
   &-wrapper {
-    width: 550px;
+    max-width: 550px;
+    .description {
+      p {
+        margin: 0.5em 0em 0em 0em;
+      }
+    }
   }
-}
-
-.img-techman {
-  width: 563px;
-  height: 563px;
-  background: url("https://aleksandr-yakovlev.surge.sh/vector/techman.svg")
-    center center no-repeat;
-}
-
-.img-bb8 {
-  width: 400px;
-  height: 608px;
-  background: url("https://aleksandr-yakovlev.surge.sh/vector/bb8.svg") center
-    center no-repeat;
-}
-
-.img-pizza {
-  width: 400px;
-  height: 608px;
-  background: url("https://aleksandr-yakovlev.surge.sh/vector/pizza.svg") center
-    center no-repeat;
 }
 
 .oasis {
@@ -45,4 +21,41 @@
   height: 43px;
   background: url("https://aleksandr-yakovlev.surge.sh/icons/oasis.svg") center
     center no-repeat;
+}
+
+@media screen and (max-device-width: 819px) {
+  .left {
+    display: none;
+  }
+  .right {
+    width: 100%;
+  }
+}
+
+@media screen and (min-device-width: 820px) {
+  .left {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .img {
+      width: 100%;
+      height: 100%;
+      background-size: 55%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      &-techman {
+        background-image: url("https://aleksandr-yakovlev.surge.sh/vector/techman.svg");
+      }
+      &-bb8 {
+        background-image: url("https://aleksandr-yakovlev.surge.sh/vector/bb8.svg");
+      }
+      &-pizza {
+        background-image: url("https://aleksandr-yakovlev.surge.sh/vector/pizza.svg");
+      }
+    }
+  }
+  .right {
+    width: 60%;
+  }
 }

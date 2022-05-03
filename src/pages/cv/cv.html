@@ -82,7 +82,7 @@
     <div class="right">
         <h1 class="name"><%-cv.about.name.toUpperCase()%></h2>
         <h2 class="role"><%-cv.about.role.join(', ')%></h2>
-        <p class="bio"><%-cv.about.bio%></p>
+        <p class="bio"><%-cv.about.bio%> <%-cv.about.relocation%></p>
         <%
           const expLen = cv.experience.length-1
           const posLen = cv.experience[expLen].positions.length-1
@@ -98,7 +98,7 @@
             </h3>
             <%if (positions?.length > 1 ) {%>
             <table class="etable">
-              <%positions?.forEach(({role, product, begin, end, tasks}, i) => { %>
+              <%positions?.forEach(({role, product, begin, end, tasks, stack}, i) => { %>
                 <tr class="text-row"> 
                   <td  <%if (i!==0) {%>class="left-td"<% } %>></td>
                   <td rowspan="3">
@@ -108,6 +108,9 @@
                       <%tasks.forEach(task=> {%>
                         <li><%-task%></li>
                        <% }) %>
+                       <%if (stack) {%>
+                        <li>stack: <span class="description"><%-stack.join(", ") %></span></li>
+                        <% } %>
                     </ul>
                   </td>
                 </tr>
