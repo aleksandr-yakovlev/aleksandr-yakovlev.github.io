@@ -82,7 +82,7 @@
     <div class="right">
         <h1 class="name"><%-cv.about.name.toUpperCase()%></h2>
         <h2 class="role"><%-cv.about.role.join(', ')%></h2>
-        <p class="bio"><%-cv.about.bio%></p>
+        <p class="bio"><%-cv.about.bio%> <%-cv.about.relocation%></p>
         <%
           const expLen = cv.experience.length-1
           const posLen = cv.experience[expLen].positions.length-1

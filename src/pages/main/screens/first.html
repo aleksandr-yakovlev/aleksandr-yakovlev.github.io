@@ -16,7 +16,9 @@
     </menu>
     <div class="info">
       <p class="info-name">Aleksandr Yakovlev</p>
-      <p class="info-prof"><%-cv.about.role.join(", ")%></p>
+      <p class="info-prof">
+        <%-cv.about.role.map(s=>s.replace(' ', ' ')).join(", ")%>
+      </p>
       <%=badge%>
     </div>
     <div class="row"></div>
