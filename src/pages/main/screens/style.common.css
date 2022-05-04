@@ -4,7 +4,6 @@ body {
     &:not(:first-of-type):not(:last-of-type) {
       min-height: calc(100% + 35px);
     }
-    &:first-of-type,
     &:last-of-type {
       min-height: 100%;
     }

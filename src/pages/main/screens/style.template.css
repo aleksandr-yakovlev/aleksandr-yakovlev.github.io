@@ -23,7 +23,7 @@
     center no-repeat;
 }
 
-@media screen and (max-device-width: 819px) {
+@media screen and (max-width: 819px) {
   .left {
     display: none;
   }
@@ -32,7 +32,7 @@
   }
 }
 
-@media screen and (min-device-width: 820px) {
+@media screen and (min-width: 820px) {
   .left {
     width: 40%;
     display: flex;
