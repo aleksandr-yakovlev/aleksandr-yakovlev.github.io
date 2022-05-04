@@ -4,7 +4,6 @@ body {
     body > div:not(:first-of-type):not(:last-of-type) {
       min-height: calc(100% + 35px);
     }
-    body > div:first-of-type,
     body > div:last-of-type {
       min-height: 100%;
     }
@@ -61,6 +60,7 @@ body {
   }
 
 .first-screen {
+  min-height: 500px;
   height: 100%;
   background: linear-gradient(135deg, #db00a4, #853ec1 70%);
   border-bottom: 2px solid black;
@@ -74,7 +74,7 @@ body {
   margin: 5% 5% 0 0;
   font-size: 14px;
 }
-@media screen and (min-device-width: 1200px) {
+@media screen and (min-width: 1200px) {
 .menu {
     margin-right: 200px
 }
@@ -84,7 +84,7 @@ body {
     display: inline;
     cursor: pointer;
   }
-@media screen and (max-device-width: 560px) {
+@media screen and (max-width: 560px) {
       .menu li:nth-last-child(n + 3) {
         display: none;
       }
@@ -126,7 +126,6 @@ body {
   }
 
 .img-portrait .img-src {
-    width: 100%;
     height: 100%;
     display: block;
   }
@@ -176,7 +175,7 @@ body {
           animation: pulse 3s infinite;
 }
 
-@media screen and (max-device-width: 680px) {
+@media screen and (max-width: 680px) {
 
 .row {
     display: none;
@@ -226,7 +225,7 @@ body {
     center no-repeat;
 }
 
-@media screen and (max-device-width: 819px) {
+@media screen and (max-width: 819px) {
   .left {
     display: none;
   }
@@ -235,7 +234,7 @@ body {
   }
 }
 
-@media screen and (min-device-width: 820px) {
+@media screen and (min-width: 820px) {
   .left {
     width: 40%;
     display: flex;
@@ -268,20 +267,23 @@ body {
   width: 100%;
   left: 0;
   top: 0;
-  padding: 2% 0 0 5%;
 }
-  @media screen and (max-device-width: 560px) {.header {
-    padding: 20px 0 0 40px;
-}
-  }
 
 .home {
+  padding: 2% 0 0 5%;
   width: 20px;
   height: 20px;
   cursor: pointer;
   background: url("https://aleksandr-yakovlev.surge.sh/icons/home.svg") center
     center no-repeat;
 }
+
+@media screen and (max-width: 560px) {
+
+.home {
+    padding: 20px 0 0 40px;
+}
+  }
 
 .break {
   height: 100%;
