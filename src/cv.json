@@ -1,7 +1,7 @@
 {
   "about": {
     "name": "Aleksandr Yakovlev",
-    "role": ["Teamlead", "Solution architect"],
+    "role": ["Teamlead", "Frontend Developer"],
     "bio": "IT enthusiast with 5+ years leadership experience in bringing product ideas to launch. Managing agile teams which are geographically distributed. I like engineering challenges, passionate in technologies, performance and architecture.",
     "relocation": "Open to relocation on a global level.",
     "born year": 1989,
@@ -19,94 +19,143 @@
   "experience": [
     {
       "company": { "name": "Sber", "site": "https://sber.ru/" },
-      "positions": [
+      "departments": [
         {
-          "product": "Regional control center",
-          "role": "Teamlead",
-          "begin": "2021",
+          "department": "CIB",
+          "tribe": "Products on Platform V",
+          "begin": 2020,
           "end": "present",
-          "tasks": [
-            "revision of architecture",
-            "leading frontend develop",
-            "transition to SaaS",
-            "bringing ETL and BI",
-            "prepare for a production"
-          ],
-          "stack": ["React", "Java/Spring", "Superset", "Platform V"]
+          "products": [
+            {
+              "product": "Regional control center",
+              "role": "Techlead",
+              "begin": 2021,
+              "end": "present",
+              "tasks": [
+                "frontend leading",
+                "revision of architecture",
+                "transition to SaaS",
+                "prepare for a production"
+              ],
+              "stack": ["React/TS", "GraphQL", "Java/Spring", "Platform V"],
+              "docs": [
+                {
+                  "url": "https://www.figma.com/proto/3aJbjDYf68bQ4vWQWrrH94/digital_region_proto?node-id=5352%3A67887&scaling=min-zoom&page-id=1131%3A39",
+                  "type": "prototype"
+                }
+              ]
+            },
+            {
+              "product": "Products based on platform V",
+              "role": "Solution Architect",
+              "begin": 2021,
+              "end": "present",
+              "tasks": [
+                "designed architecture",
+                "platform consultation",
+                "technical audit of frontend apps"
+              ],
+              "stack": ["React/TS", "Java/Spring", "Flutter", "Platform V"],
+              "docs": [
+                {
+                  "url": "https://www.figma.com/proto/dPkaoOoWNlGdXjIhoEdy6J/You_not_alone_proto?node-id=2%3A11959&scaling=min-zoom&starting-point-node-id=2%3A14114",
+                  "type": "prototype"
+                },
+                {
+                  "url": "https://www.figma.com/proto/DeznXyznr25o4gfGVsQT5b/s3_admin_proto?node-id=290%3A42176&scaling=min-zoom&page-id=94%3A32453&starting-point-node-id=290%3A42176",
+                  "type": "prototype"
+                }
+              ]
+            },
+            {
+              "product": "Intelligent transport system",
+              "role": "Teamlead",
+              "begin": 2020,
+              "end": 2021,
+              "tasks": [
+                "created POCs and prototypes",
+                "researched partner solutions",
+                "hired dev team (back, front)",
+                "transitioned development to a subsidiary"
+              ],
+              "stack": ["React/TS", "Node.js"],
+              "docs": [
+                {
+                  "url": "https://www.figma.com/proto/YbOpXMtT07jfV3ZYK8fNJK/ITS_Proto?node-id=0%3A1&scaling=min-zoom&starting-point-node-id=624%3A1356",
+                  "type": "prototype"
+                },
+                {
+                  "url": "https://github.com/aleksandr-yakovlev/secret-project-recruitment",
+                  "type": "repo"
+                }
+              ]
+            }
+          ]
         },
         {
-          "product": "Products based on platform V",
-          "role": "Solution Architect",
-          "begin": "2021",
-          "end": "present",
-          "tasks": [
-            "designing architecture",
-            "platform consultation",
-            "technical audit of a frontend app"
-          ],
-          "stack": ["React", "Java/Spring", "Platform V"]
-        },
-        {
-          "product": "Intelligent transport system",
-          "role": "Teamlead",
-          "begin": "2020",
-          "end": "2021",
-          "tasks": [
-            "creating POCs",
-            "research of partner solutions",
-            "building development teams"
-          ],
-          "stack": ["React", "Node.js", "Postgress"]
-        },
-        {
-          "product": "Analytical performance monitoring system",
-          "role": "Teamlead",
-          "begin": "2015",
-          "end": "2020",
-          "tasks": [
-            "bringing product ideas to launch",
-            "designing architecture",
-            "implementing of support according to ITIL standards",
-            "transition to cloud-native architecture",
-            "transform to agile",
-            "full HR-cycle"
-          ],
-          "stack": [
-            "JS/React",
-            "Node.js",
-            "ClickHouse",
-            "Greenplum",
-            "ELK",
-            "Kafka",
-            "NiFi",
-            "OpenShift",
-            "Keycloak"
+          "department": "Reliability",
+          "begin": 2015,
+          "end": 2020,
+          "products": [
+            {
+              "product": "Analytical performance monitoring system",
+              "role": "Teamlead",
+              "begin": 2015,
+              "end": 2020,
+              "tasks": [
+                "bringing product ideas to launch",
+                "designing architecture",
+                "implementing of support according to ITIL standards",
+                "transition to cloud-native architecture",
+                "transform to agile",
+                "full HR-cycle"
+              ],
+              "stack": [
+                "TS/React",
+                "Node.js",
+                "ClickHouse",
+                "Greenplum",
+                "ELK",
+                "Superset",
+                "Kafka",
+                "NiFi",
+                "OpenShift",
+                "Keycloak"
+              ]
+            }
           ]
         }
       ]
     },
     {
       "company": { "name": "Alfabank", "site": "https://alfabank.com/" },
-      "positions": [
+      "departments": [
         {
-          "role": "Middle developer",
-          "begin": "2013",
-          "end": "2015",
-          "tasks": [
-            "develop DWH",
-            "develop frontends for local services",
-            "building support processes based on ITIL"
-          ]
-        },
-        {
-          "role": "Middle engineer",
-          "begin": "2011",
-          "end": "2013",
-          "tasks": [
-            "building support processes on local offices",
-            "interaction with contractors",
-            "IT budget management",
-            "infrastructure management and IT setup for new offices"
+          "department": "Distributed Teams",
+          "begin": 2011,
+          "end": 2015,
+          "products": [
+            {
+              "role": "Middle developer",
+              "begin": 2013,
+              "end": 2015,
+              "tasks": [
+                "develop DWH",
+                "develop frontends for local services",
+                "builded support processes based on ITIL"
+              ]
+            },
+            {
+              "role": "Middle engineer",
+              "begin": 2011,
+              "end": 2013,
+              "tasks": [
+                "builded support processes on local offices",
+                "interaction with contractors",
+                "IT budget management",
+                "infrastructure management and IT setup for new offices"
+              ]
+            }
           ]
         }
       ]
@@ -115,8 +164,8 @@
       "company": { "name": "Previous experience" },
       "positions": [
         {
-          "begin": "2008",
-          "end": "2011",
+          "begin": 2008,
+          "end": 2011,
           "tasks": [
             "support on local offices",
             "IT budget management",

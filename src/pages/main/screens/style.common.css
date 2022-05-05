@@ -43,10 +43,42 @@ body {
     margin: 0;
   }
   &-foot {
-    margin-right: 30px;
+    font-size: 15px;
+    margin-top: 5px;
     & span {
       white-space: pre-wrap;
       display: inline-block;
+    }
+  }
+  &-department {
+    font-weight: normal;
+    font-size: 20px;
+    color: gray;
+  }
+  &-period {
+    font-size: 15px;
+    margin: 0;
+    color: gray;
+  }
+  &-products {
+    @media screen and (max-width: 819px) {
+      padding-inline-start: 20px;
+    }
+
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+  &-product {
+    color: gray;
+    font-weight: normal;
+  }
+
+  &-role {
+    line-height: 1.2;
+    font-size: 18px;
+    margin: 10px 0px 0 0px;
+    .docs {
+      color: gray;
     }
   }
 }
@@ -57,4 +89,11 @@ body {
     font-size: 50px;
     margin: 0px;
   }
+}
+
+.description {
+  padding-top: 3px;
+  color: gray;
+  font-size: 12px;
+  margin: 0;
 }
