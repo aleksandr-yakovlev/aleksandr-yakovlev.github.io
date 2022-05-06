@@ -40,6 +40,7 @@ body {
 }
 
 .list-head {
+    line-height: 1.1;
     margin: 0;
   }
 
@@ -57,7 +58,7 @@ body {
 
 .list-period {
     font-size: 15px;
-    margin: 0;
+    margin: 5px 0 0 0;
     color: gray;
   }
 
@@ -259,9 +260,6 @@ body {
   .right-wrapper .description p {
         margin-top: 0.5em;
       }
-  .right .intro {
-    text-align: justify;
-  }
 
 .oasis {
   width: 89px;
