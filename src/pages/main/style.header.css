@@ -3,13 +3,13 @@
   width: 100%;
   left: 0;
   top: 0;
-  @media screen and (max-device-width: 560px) {
-    padding: 20px 0 0 40px;
-  }
-  padding: 2% 0 0 5%;
 }
 
 .home {
+  @media screen and (max-width: 560px) {
+    padding: 20px 0 0 40px;
+  }
+  padding: 2% 0 0 5%;
   width: 20px;
   height: 20px;
   cursor: pointer;

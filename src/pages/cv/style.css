@@ -92,6 +92,10 @@
   margin-left: -5px;
 }
 
+.circle.fill {
+  background: black;
+}
+
 .circle-row {
   height: 0px;
 }
@@ -104,15 +108,15 @@
 }
 
 .etable {
-  max-width: 450px;
+  max-width: 700px;
   padding-left: 20px;
   border-spacing: 0px;
   td {
     vertical-align: top;
   }
-  p,
-  h3 {
-    margin: 0 0 3px 0;
+  h3,
+  .description {
+    margin: 0;
   }
   tr:not(:last-child) {
     .left-td {
@@ -140,7 +144,7 @@
 }
 
 .company {
-  padding-left: 10px;
+  margin: 20px 0 10px 10px;
 }
 
 .bio {
@@ -161,7 +165,60 @@
 }
 
 .stack {
-  max-width: 400px;
-  /* padding: 2px 0px 0px 0px; */
+  padding-top: 3px;
+  color: gray;
   font-size: 12px;
+  margin: 0;
+}
+
+.list {
+  &-head {
+    margin: 0;
+  }
+  &-foot {
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+  }
+  &-department {
+    font-weight: normal;
+    font-size: 15px;
+    color: gray;
+  }
+  &-period {
+    font-size: 15px;
+    margin: 0;
+    color: gray;
+  }
+
+  &-product {
+    color: gray;
+    font-weight: normal;
+  }
+  &-role {
+    font-size: 15px;
+    margin: 10px 0px 0 0px;
+    .docs {
+      color: gray;
+    }
+  }
+}
+
+.badge.small {
+  width: 16px;
+  height: 16px;
+  background-size: 16px;
+}
+
+.left-td.padded {
+  &-s {
+    padding-top: 20px;
+  }
+  &-m {
+    padding-top: 30px;
+  }
+}
+
+.padded {
+  padding-top: 20px;
 }

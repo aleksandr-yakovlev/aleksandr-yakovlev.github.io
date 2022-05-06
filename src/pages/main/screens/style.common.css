@@ -4,7 +4,6 @@ body {
     &:not(:first-of-type):not(:last-of-type) {
       min-height: calc(100% + 35px);
     }
-    &:first-of-type,
     &:last-of-type {
       min-height: 100%;
     }
@@ -15,6 +14,7 @@ body {
 .screen-wrapper {
   width: 100%;
 }
+
 
 .screen {
   display: flex;
@@ -44,10 +44,37 @@ body {
     margin: 0;
   }
   &-foot {
-    margin-right: 30px;
-    & span {
-      white-space: pre-wrap;
-      display: inline-block;
+    font-size: 15px;
+    margin-top: 5px;
+
+  }
+  &-department {
+    font-weight: normal;
+    font-size: 20px;
+    color: gray;
+  }
+  &-period {
+    font-size: 15px;
+    margin: 0;
+    color: gray;
+  }
+  &-products {
+    @media screen and (max-width: 819px) {
+      padding-inline-start: 20px;
+    }
+
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+  &-product {
+    color: gray;
+    font-weight: normal;
+  }
+  &-role {
+    font-size: 18px;
+    margin: 10px 0px 0 0px;
+    .docs {
+      color: gray;
     }
   }
 }
@@ -58,4 +85,11 @@ body {
     font-size: 50px;
     margin: 0px;
   }
+}
+
+.stack {
+  padding-top: 3px;
+  color: gray;
+  font-size: 12px;
+  margin: 0;
 }
