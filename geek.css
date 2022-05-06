@@ -40,11 +40,16 @@
     display: inline-block;
   }
 
+.JSON_viewer .value {
+    word-wrap:break-word;
+  }
+
 .JSON_viewer .value.null {
       color: var(--null-color);
     }
 
 .JSON_viewer .value.string {
+
       color: var(--string-color);
     }
 
