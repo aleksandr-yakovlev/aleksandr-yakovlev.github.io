@@ -1,13 +1,11 @@
 <div class="experience">
   <h1>Experience</h1>
-  <%experience.forEach(e => { e.positions && e.positions.forEach (p => {%><h3 class="list-head"><%-p.begin%>-<%-p.end%></h3>
-  <p class="list-foot"><%=p.role && `${p.role} in `%><%=e.company.name%></p>
-  <% }); e.departments && e.departments.forEach (d => {%>
+  <%experience.forEach(e => { e.departments && e.departments.forEach (({department, begin, end, products}) => {%>
   <h3 class="list-head">
-    <%-e.company.name%><span class="list-department"> · <%-d.department%></span>
+    <%-e.company.name%><span class="list-department"> · <%-department%></span>
   </h3>
-  <p class="list-period"><%-d.begin%> - <%-d.end%></p>
-  <%d.products.forEach(({role, product, tasks, stack, docs}) => {%>
+  <p class="list-period"><%-begin%> - <%-end%></p>
+  <%products && products.forEach(({role, product, tasks, stack, docs}) => {%>
   <p class="list-role">
     <%-role%><span class="list-product"
       ><%=product && " · ".concat(product)%><%if (docs) {%> · <%docs.forEach(({url,type})=>{%><a
@@ -26,3 +24,9 @@
   <p class="list-foot"><%=tasks.join(" · ")%></p>
   <% }) %> <% }) }) %>
 </div>
+
+tr:not(:last-child) {
+    .left-td {
+      border-left: black 1px solid;
+    }
+  }
