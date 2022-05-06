@@ -32,10 +32,12 @@
               "begin": 2021,
               "end": "present",
               "tasks": [
-                "frontend leading",
-                "revision of architecture",
-                "transition to SaaS",
-                "prepare for a production"
+                "Led frontend development",
+                "Fixed bugs and developed hot features for backend (java)",
+                "Performed a platform audit",
+                "Began migrate to SaaS and standalone",
+                "Migrated deployment environments",
+                "Prepared for a production"
               ],
               "stack": ["React/TS", "GraphQL", "Java/Spring", "Platform V"],
               "docs": [
@@ -51,9 +53,10 @@
               "begin": 2021,
               "end": "present",
               "tasks": [
-                "designed architecture",
-                "platform consultation",
-                "technical audit of frontend apps"
+                "Designed application architecture",
+                "Advised on platform development",
+                "Performed technical audit of frontend apps",
+                "Built agile processes"
               ],
               "stack": ["React/TS", "Java/Spring", "Flutter", "Platform V"],
               "docs": [
@@ -73,10 +76,10 @@
               "begin": 2020,
               "end": 2021,
               "tasks": [
-                "created POCs and prototypes",
-                "researched partner solutions",
-                "hired dev team (back, front)",
-                "transitioned development to a subsidiary"
+                "Created POCs and prototypes",
+                "Researched partner solutions",
+                "Hired dev team (back, front)",
+                "Migrated development to a subsidiary"
               ],
               "stack": ["React/TS", "Node.js"],
               "docs": [
@@ -98,17 +101,15 @@
           "end": 2020,
           "products": [
             {
-              "product": "Analytical performance monitoring system",
+              "product": "Analytical system",
               "role": "Teamlead",
               "begin": 2015,
               "end": 2020,
               "tasks": [
-                "bringing product ideas to launch",
-                "designing architecture",
-                "implementing of support according to ITIL standards",
-                "transition to cloud-native architecture",
-                "transform to agile",
-                "full HR-cycle"
+                "Turned product idea to prodaction",
+                "Designed cloud-native architecture",
+                "Formed product agile teams, and full HR-cycle",
+                "Provided application support"
               ],
               "stack": [
                 "TS/React",
@@ -140,9 +141,9 @@
               "begin": 2013,
               "end": 2015,
               "tasks": [
-                "develop DWH",
-                "develop frontends for local services",
-                "builded support processes based on ITIL"
+                "Developed DWH",
+                "Developed frontends for local services",
+                "Built support processes based on ITIL"
               ]
             },
             {
@@ -150,10 +151,10 @@
               "begin": 2011,
               "end": 2013,
               "tasks": [
-                "builded support processes on local offices",
-                "interaction with contractors",
-                "IT budget management",
-                "infrastructure management and IT setup for new offices"
+                "Provided infrastructure management and IT setup for new offices",
+                "Built support processes on local offices",
+                "Interacted with contractors",
+                "Formed the IT budget"
               ]
             }
           ]

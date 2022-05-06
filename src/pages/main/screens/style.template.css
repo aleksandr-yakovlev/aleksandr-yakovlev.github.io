@@ -9,7 +9,7 @@
     max-width: 650px;
     .description {
       p {
-        margin: 0.5em 0em 0em 0em;
+        margin-top: 0.5em;
       }
     }
   }
@@ -41,9 +41,9 @@
     align-items: center;
     justify-content: center;
     .img {
-      width: 100%;
+      width: 50%;
       height: 100%;
-      background-size: 50%;
+      background-size: auto;
       background-position: center center;
       background-repeat: no-repeat;
       &-techman {

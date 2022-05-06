@@ -72,9 +72,7 @@ body {
     color: gray;
     font-weight: normal;
   }
-
   &-role {
-    line-height: 1.2;
     font-size: 18px;
     margin: 10px 0px 0 0px;
     .docs {
@@ -91,7 +89,7 @@ body {
   }
 }
 
-.description {
+.stack {
   padding-top: 3px;
   color: gray;
   font-size: 12px;
