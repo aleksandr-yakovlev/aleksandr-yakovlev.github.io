@@ -22,6 +22,11 @@ body {
     center no-repeat;
 }
 
+.figma {
+  background: url("https://aleksandr-yakovlev.surge.sh/icons/figma.svg") center
+    center no-repeat;
+}
+
 .mail {
   background: url("https://aleksandr-yakovlev.surge.sh/icons/mail.svg") center
     center no-repeat;
@@ -31,4 +36,20 @@ a {
   text-decoration: inherit;
   color: inherit;
 }
+
+.badge {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  content: "";
+  cursor: pointer;
+}
+
+.badge.small {
+    width: 18px;
+    height: 18px;
+    background-size: 18px;
+    padding-left: 5px;
+    vertical-align: text-top;
+  }
 
