@@ -14,10 +14,12 @@
   }
 
   & .value {
+    word-wrap:break-word;
     &.null {
       color: var(--null-color);
     }
     &.string {
+
       color: var(--string-color);
     }
     &.number {
