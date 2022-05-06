@@ -32,7 +32,7 @@
               "begin": 2021,
               "end": "present",
               "tasks": [
-                "Led frontend development",
+                "Leaded frontend development",
                 "Fixed bugs and developed hot features for backend (java)",
                 "Performed a platform audit",
                 "Began migrate to SaaS and standalone",
@@ -163,14 +163,22 @@
     },
     {
       "company": { "name": "Previous experience" },
-      "positions": [
+      "departments": [
         {
-          "begin": 2008,
+          "department": "Local Teams",
+          "begin": 2005,
           "end": 2011,
-          "tasks": [
-            "support on local offices",
-            "IT budget management",
-            "outsourcing"
+          "products": [
+            {
+              "role": "Engineer",
+              "begin": 2013,
+              "end": 2015,
+              "tasks": [
+                "Supported local offices",
+                "IT budget management",
+                "Outsourcing"
+              ]
+            }
           ]
         }
       ]

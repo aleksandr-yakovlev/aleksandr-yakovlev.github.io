@@ -85,51 +85,71 @@
         <p class="bio"><%-cv.about.bio%> <%-cv.about.relocation%></p>
         <%
           const expLen = cv.experience.length-1
-          const posLen = cv.experience[expLen].positions.length-1
+          const posLen = cv.experience[expLen].departments.length-1
         %>
-        <h3 class="title">Experience <span class="description"> · <%-(Number.isInteger(Number(cv.experience[0].positions[0].end)) ? cv.experience[0].positions[0].end : new Date().getFullYear())-cv.experience[expLen].positions[posLen].begin%> yr</span></h3>
-          <%cv.experience.forEach(({company, positions}) => { 
-            const len = positions?.length - 1
+        <h3 class="title">Experience <span class="description"> · <%-(Number.isInteger(Number(cv.experience[0].departments[0].end)) ? cv.experience[0].departments[0].end : new Date().getFullYear())-cv.experience[expLen].departments[posLen].begin%> yr</span></h3>
+          <%cv.experience.forEach(({company, departments}) => { 
+            const len = departments?.length - 1
           %>
-            <h3 class="company">
-              <%=company.site && `<a href="${company.site}">`%>
-                <span><%=company.name%></span><span class="description"> · <%-(Number.isInteger(Number(positions[0].end)) ? positions[0].end : new Date().getFullYear())-positions[len].begin%> yr</span>
-              <%=company.site && "</a>"%>
-            </h3>
-            <%if (positions?.length > 1 ) {%>
+            <%if (departments?.length > 0 ) {%>
             <table class="etable">
-              <%positions?.forEach(({role, product, begin, end, tasks, stack}, i) => { %>
+             
+              <h3 class="company">
+                <%=company.site && `<a href="${company.site}">`%>
+                  <span><%=company.name%></span><span class="description"> · <%-(Number.isInteger(Number(departments[0].end)) ? departments[0].end : new Date().getFullYear())-departments[len].begin%> yr</span>
+                <%=company.site && "</a>"%>
+              </h3>
+          
+              <%departments?.forEach(({department, role, products, begin, end}, i) => { %>
                 <tr class="text-row"> 
-                  <td  <%if (i!==0) {%>class="left-td"<% } %>></td>
-                  <td rowspan="3">
-                    <h3><%-role%><%=product && `<span class="description"> · ${product}</span>`%></h3>
+                  <td <%if (i!==0) {%>class="left-td padded-m"<% } %>></td>
+                  <td rowspan="3" <%if (i!==0) {%>class="padded"<% } %>>
+                    <h3><%-department%></h3>
                     <p class="description"><%=begin%> - <%=end%> · <%-(Number.isInteger(Number(end)) ? end : new Date().getFullYear())-begin%> yr</p>
-                    <ul>
-                      <%tasks.forEach(task=> {%>
-                        <li><%-task%></li>
-                       <% }) %>
-                       <%if (stack) {%>
-                        <li>stack: <span class="description"><%-stack.join(", ") %></span></li>
-                        <% } %>
-                    </ul>
                   </td>
                 </tr>
-                <tr class="circle-row">
-                  <td>
-                    <div class="circle"></div>
-                </td>
-              </tr>
+                  <tr class="circle-row">
+                    <td>
+                      <div class="circle fill"></div>
+                  </td>
                 <tr class="line-row">
                   <td class="left-td"></td>
                 </tr>
+                    <%products && products.forEach(({role, product, tasks, stack, docs}) => {%>
+                      <tr class="text-row"> 
+                  <td  class="left-td padded-s"></td>
+                  <td rowspan="3" >
+                      <p class="list-role">
+                        <%-role%><span class="list-product"
+                          ><%=product && " · ".concat(product)%><%if (docs) {%> · <%docs.forEach(({url,type})=>{%><a
+                            class="badge <%-type==='prototype' ? 'figma' : 'github'%> small"
+                            href="<%-url%>"
+                            target="_blank"
+                          ></a
+                          ><%})%>
+                          </span>
+                        </span>
+                        <%} %>
+                      </p>
+                      <%if (stack) {%>
+                      <p class="stack"><%=stack.join(" · ")%></p>
+                      <%} %>
+                      <p class="list-foot"><%=tasks.join(" · ")%></p>
+                    </td>
+                </tr>
+                      <tr class="circle-row">
+                    <td>
+                      <div class="circle"></div>
+                  </td>
+                <tr class="line-row">
+                  <td class="left-td"></td>
+                </tr>
+                       <% }) %> 
+                    
             <% }) %> 
           </table>
         <% } else {%>   
-          <ul>
-            <%positions[0].tasks.forEach(task=> {%>
-              <li><%-task%></li>
-             <% }) %>
-          </ul>
+     
         <% } %>
         <% }) %>  
          <h3 class="title">Education</h3>

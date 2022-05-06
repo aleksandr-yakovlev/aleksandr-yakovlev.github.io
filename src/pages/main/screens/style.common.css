@@ -15,6 +15,7 @@ body {
   width: 100%;
 }
 
+
 .screen {
   display: flex;
   align-items: center;
@@ -45,10 +46,7 @@ body {
   &-foot {
     font-size: 15px;
     margin-top: 5px;
-    & span {
-      white-space: pre-wrap;
-      display: inline-block;
-    }
+
   }
   &-department {
     font-weight: normal;
