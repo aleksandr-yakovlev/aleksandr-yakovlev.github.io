@@ -41,6 +41,7 @@ body {
 
 .list {
   &-head {
+    line-height: 1.1;
     margin: 0;
   }
   &-foot {
@@ -55,7 +56,7 @@ body {
   }
   &-period {
     font-size: 15px;
-    margin: 0;
+    margin: 5px 0 0 0;
     color: gray;
   }
   &-products {
