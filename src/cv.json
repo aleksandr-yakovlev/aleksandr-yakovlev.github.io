@@ -1,8 +1,11 @@
 {
   "about": {
     "name": "Aleksandr Yakovlev",
-    "role": ["Teamlead", "Frontend Developer"],
-    "bio": "IT enthusiast with 5+ years leadership experience in bringing product ideas to launch. Managing agile teams which are geographically distributed. I like engineering challenges, passionate in technologies, performance and architecture.",
+    "role": [
+      "CTO",
+      "Technical Director"
+    ],
+    "bio": "IT enthusiast with 7+ years leadership experience in bringing product ideas to launch. Managing agile teams which are geographically distributed. I like engineering challenges, passionate in technologies, performance and architecture.",
     "relocation": "Open to relocation on a global level.",
     "born year": 1989,
     "location": "Moscow, Russia",
@@ -18,13 +21,57 @@
   },
   "experience": [
     {
-      "company": { "name": "Sber", "site": "https://sber.ru/" },
+      "company": {
+        "name": "Autotech",
+        "site": "https://sberautotech.ru/"
+      },
+      "departments": [
+        {
+          "department": "Web&Mobile Apps",
+          "begin": 2022,
+          "end": "present",
+          "products": [
+            {
+              "product": "Tablets&Visualization",
+              "role": "Lead",
+              "begin": 2021,
+              "end": "present",
+              "tasks": [
+                "Key Responsibility Areas: architecture and process improvement, developer experience",
+                "Formed the frontend team of the company",
+                "Built the release process",
+                "Release a new product for 3D visualization of ROS2 logs",
+                "Created documentation and architecture",
+                "Release ui-kit"
+              ],
+              "stack": [
+                "React/TS",
+                "WebGL",
+                "ROS2",
+                "WebSocket"
+              ],
+              "docs": [
+                {
+                  "url": "https://www.figma.com/proto/3aJbjDYf68bQ4vWQWrrH94/digital_region_proto?node-id=5352%3A67887&scaling=min-zoom&page-id=1131%3A39",
+                  "type": "prototype"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "Sber",
+        "site": "https://sber.ru/"
+      },
       "departments": [
         {
           "department": "CIB",
           "tribe": "Products on Platform V",
           "begin": 2020,
-          "end": "present",
+          "end": 2022,
           "products": [
             {
               "product": "Regional control center",
@@ -39,7 +86,12 @@
                 "Migrated deployment environments",
                 "Prepared for a production"
               ],
-              "stack": ["React/TS", "GraphQL", "Java/Spring", "Platform V"],
+              "stack": [
+                "React/TS",
+                "GraphQL",
+                "Java/Spring",
+                "Platform V"
+              ],
               "docs": [
                 {
                   "url": "https://www.figma.com/proto/3aJbjDYf68bQ4vWQWrrH94/digital_region_proto?node-id=5352%3A67887&scaling=min-zoom&page-id=1131%3A39",
@@ -58,7 +110,12 @@
                 "Performed technical audit of frontend apps",
                 "Built agile processes"
               ],
-              "stack": ["React/TS", "Java/Spring", "Flutter", "Platform V"],
+              "stack": [
+                "React/TS",
+                "Java/Spring",
+                "Flutter",
+                "Platform V"
+              ],
               "docs": [
                 {
                   "url": "https://www.figma.com/proto/dPkaoOoWNlGdXjIhoEdy6J/You_not_alone_proto?node-id=2%3A11959&scaling=min-zoom&starting-point-node-id=2%3A14114",
@@ -81,7 +138,10 @@
                 "Hired dev team (back, front)",
                 "Migrated development to a subsidiary"
               ],
-              "stack": ["React/TS", "Node.js"],
+              "stack": [
+                "React/TS",
+                "Node.js"
+              ],
               "docs": [
                 {
                   "url": "https://www.figma.com/proto/YbOpXMtT07jfV3ZYK8fNJK/ITS_Proto?node-id=0%3A1&scaling=min-zoom&starting-point-node-id=624%3A1356",
@@ -129,7 +189,10 @@
       ]
     },
     {
-      "company": { "name": "Alfabank", "site": "https://alfabank.com/" },
+      "company": {
+        "name": "Alfabank",
+        "site": "https://alfabank.com/"
+      },
       "departments": [
         {
           "department": "Distributed Teams",
@@ -162,7 +225,9 @@
       ]
     },
     {
-      "company": { "name": "Previous experience" },
+      "company": {
+        "name": "Previous experience"
+      },
       "departments": [
         {
           "department": "Local Teams",
@@ -192,7 +257,16 @@
       "Agile",
       "ITSM"
     ],
-    "Frontend": ["ES6/ES7", "TS", "React", "Node.js", "Jest", "Webpack", "Git"],
+    "Frontend": [
+      "ES6/ES7",
+      "TypeScript",
+      "React",
+      "Node.js",
+      "WebGL",
+      "Jest",
+      "Webpack",
+      "Git"
+    ],
     "Data": [
       "Data Vault",
       "Streaming",
@@ -205,7 +279,13 @@
       "Spark",
       "Ni-fi"
     ],
-    "DevOps": ["Cloud-Native", "Linux", "Kubernetes", "OpenShift", "Jenkins"]
+    "DevOps": [
+      "Cloud-Native",
+      "Linux",
+      "Kubernetes",
+      "OpenShift",
+      "Jenkins"
+    ]
   },
   "education": [
     {
@@ -241,5 +321,10 @@
       "rank": "Native"
     }
   ],
-  "interests": ["Snowboard", "Swimming", "Traveling", "Computer science"]
+  "interests": [
+    "Snowboard",
+    "Swimming",
+    "Traveling",
+    "Computer science"
+  ]
 }
