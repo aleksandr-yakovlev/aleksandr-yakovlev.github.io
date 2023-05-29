@@ -1,0 +1,240 @@
+#root {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 13px;
+}
+
+.root-wrapper {
+  width: 1240px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.root-wrapper > div {
+    padding-top: 15px;
+  }
+
+.left {
+  width: 300px;
+  background-color: #141414;
+  color: #fff;
+  padding-left: 20px;
+}
+
+.left-wrapper {
+    padding: 20px;
+  }
+
+.left-wrapper:not(:last-child) {
+      border-bottom: white 1px solid;
+    }
+
+.left-one {
+    display: flex;
+    flex-direction: column;
+  }
+
+.left-one a,
+    .left-one > div {
+      margin-bottom: 4px;
+    }
+
+.left h4 {
+    margin: 0;
+  }
+
+.left .list-foot {
+    margin-top: 3px;
+  }
+
+.right {
+  width: 800px;
+  padding: 40px;
+}
+
+.ava {
+  text-align: center;
+}
+
+.ava .img-ava {
+    border-radius: 50%;
+    border: white 2px solid;
+    width: 100px;
+  }
+
+.bage {
+  color: white;
+}
+
+.icon,
+.text {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.text {
+  padding-left: 3px;
+}
+
+.name {
+  margin-bottom: 5px;
+}
+
+.role {
+  margin-top: 0;
+  font-weight: normal;
+}
+
+.title {
+  border-bottom: black 1px solid;
+  padding: 15px 0px 10px 10px;
+}
+
+.circle {
+  border: black 1px solid;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  margin-left: -5px;
+}
+
+.circle.fill {
+  background: black;
+}
+
+.circle-row {
+  height: 0px;
+}
+
+.text-row {
+  height: 10px;
+}
+
+.text-row td:not(:first-child) {
+    padding-left: 10px;
+  }
+
+.etable {
+  max-width: 700px;
+  padding-left: 20px;
+  border-spacing: 0px;
+}
+
+.etable td {
+    vertical-align: top;
+  }
+
+.etable h3,
+  .etable .description {
+    margin: 0;
+  }
+
+.etable tr:not(:last-child) .left-td {
+      border-left: black 1px solid;
+    }
+
+.etc tr:last-child .left-td {
+      border-left: black 1px dashed;
+    }
+
+.yr,
+.description {
+  color: gray;
+}
+
+.description {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.company {
+  margin: 20px 0 10px 10px;
+}
+
+.bio {
+  width: 658px;
+  color: gray;
+}
+
+.interests-table td {
+  padding: 0px 10px 10px 0px;
+}
+
+.languages-table td {
+  max-width: 130px;
+  vertical-align: top;
+}
+
+.languages-table td p {
+    margin: 0px 0px 5px 0px;
+  }
+
+.stack {
+  padding-top: 3px;
+  color: gray;
+  font-size: 12px;
+  margin: 0;
+}
+
+.list-head {
+    margin: 0;
+  }
+
+.list-foot {
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+  }
+
+.list-department {
+    font-weight: normal;
+    font-size: 15px;
+    color: gray;
+  }
+
+.list-period {
+    font-size: 15px;
+    margin: 0;
+    color: gray;
+  }
+
+.list-product {
+    color: gray;
+    font-weight: normal;
+  }
+
+.list-role {
+    font-size: 15px;
+    margin: 10px 0px 0 0px;
+  }
+
+.list-role .docs {
+      color: gray;
+    }
+
+.badge.small {
+  width: 16px;
+  height: 16px;
+  background-size: 16px;
+}
+
+.left-td.padded-s {
+    padding-top: 20px;
+  }
+
+.left-td.padded-m {
+    padding-top: 30px;
+  }
+
+.padded {
+  padding-top: 20px;
+}
+
+.department {
+  font-weight: 600px;
+  font-size: 14px;
+  margin: 0 0 2px 0;
+}
+
