@@ -32,6 +32,11 @@ body {
     center no-repeat;
 }
 
+.video {
+  background: url("https://aleksandr-yakovlev.github.io/icons/video.svg") center
+    center no-repeat;
+}
+
 a {
   text-decoration: inherit;
   color: inherit;
