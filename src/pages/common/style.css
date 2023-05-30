@@ -14,22 +14,17 @@ body {
 }
 
 .telegram {
-  background: url("https://aleksandr-yakovlev.surge.sh/icons/telegram.svg")
+  background: url("https://aleksandr-yakovlev.github.io/icons/telegram.svg")
     center center no-repeat;
 }
 
 .github {
-  background: url("https://aleksandr-yakovlev.surge.sh/icons/github.svg") center
-    center no-repeat;
-}
-
-.figma {
-  background: url("https://aleksandr-yakovlev.surge.sh/icons/figma.svg") center
+  background: url("https://aleksandr-yakovlev.github.io/icons/github.svg") center
     center no-repeat;
 }
 
 .mail {
-  background: url("https://aleksandr-yakovlev.surge.sh/icons/mail.svg") center
+  background: url("https://aleksandr-yakovlev.github.io/icons/mail.svg") center
     center no-repeat;
 }
 

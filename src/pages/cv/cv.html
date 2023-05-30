@@ -1,87 +1,102 @@
 <div id="root">
   <div class="root-wrapper">
     <div class="left">
-     <div class="ava">
-     <img class="img-ava" src="https://aleksandr-yakovlev.surge.sh/images/ava.png"/>
-     </div>
-     <div class="left-wrapper">
-      <div class="left-one">
-        <a href="https://www.google.ru/maps/search/<%-cv.about.location%>">
-        <span class="icon"><%=icons.location%></span>
-        <span class="text">
-          <%-cv.about.location%>
-        </span>
-        </a>
+      <div class="ava">
+        <img class="img-ava" src="https://aleksandr-yakovlev.github.io/images/ava.png" />
+      </div>
+      <div class="left-wrapper">
+        <div class="left-one">
+          <a href="https://www.google.ru/maps/search/<%-cv.about.location%>">
+            <span class="icon">
+              <%=icons.location%>
+            </span>
+            <span class="text">
+              <%-cv.about.location%>
+            </span>
+          </a>
           <a href="<%-cv.about.github%>">
-            <span class="icon"><%=icons.github%></span>
+            <span class="icon">
+              <%=icons.github%>
+            </span>
             <span class="text">
               <%-cv.about.github.substring(cv.about.github.lastIndexOf("/")+1)%>
             </span>
           </a>
           <a href="<%-cv.about.site%>">
-            <span class="icon"><%=icons.link%></span>
+            <span class="icon">
+              <%=icons.link%>
+            </span>
             <span class="text"><%-cv.about.site.substring(cv.about.site.lastIndexOf("/")+1)%></span>
           </a>
           <a href="mailto:<%-cv.about.email%>">
-            <span class="icon"><%=icons.mail%></span>
+            <span class="icon">
+              <%=icons.mail%>
+            </span>
             <span class="text"><%-cv.about.email%></span>
           </a>
           <a href="<%-cv.about.telegram%>">
-            <span class="icon"><%=icons.telegram%></span>
-            <span class="text"
-              ><%-cv.about.telegram.substring(cv.about.telegram.lastIndexOf("/")+1)%></span
-            >
+            <span class="icon">
+              <%=icons.telegram%>
+            </span>
+            <span class="text"><%-cv.about.telegram.substring(cv.about.telegram.lastIndexOf(" /")+1)%></span>
           </a>
           <a href="Tel:<%-cv.about.phone%>">
-            <span class="icon"><%=icons.phone%></span>
+            <span class="icon">
+              <%=icons.phone%>
+            </span>
             <span class="text"><%-cv.about.phone%></span>
           </a>
         </div>
       </div>
       <div class="left-wrapper">
         <div class="left-two"></div>
-          <h3>Skills</h3>
-            <%Object.keys(cv.skills).forEach(skill => { %>
-              <h4 class="list-head"><%-skill%></h4>
-              <p class="list-foot"><span><%=cv.skills[skill].join(" </span><span>|&nbsp;")%></p>
-            <% }) %>
+        <h3>Skills</h3>
+        <%Object.keys(cv.skills).forEach(skill=> { %>
+          <h4 class="list-head"><%-skill%></h4>
+          <p class="list-foot"><span>
+              <%=cv.skills[skill].join(" </span><span>|&nbsp;")%></p>
+          <% }) %>
       </div>
       <div class="left-wrapper">
         <div class="left-languages">
           <h3>Languages</h3>
-            <table class="languages-table">
-              <%for (i=0; i<cv.languages.length;i+=2) { %>
-                <tr>
-                  <td>
-                    <p><%-cv.languages[i].language%></p>
-                    <p class="description"><%-cv.languages[i].rank%></p>
-                  </td>
-                  <td>
-                    <p><%-cv.languages[i+1].language%></p>
-                    <p class="description"><%-cv.languages[i+1].rank%></p>
-                  </td>
-                </tr>
+          <table class="languages-table">
+            <%for (i=0; i<cv.languages.length;i+=2) { %>
+              <tr>
+                <td>
+                  <p><%-cv.languages[i].language%></p>
+                  <p class="description"><%-cv.languages[i].rank%></p>
+                </td>
+                <td>
+                  <p><%-cv.languages[i+1].language%></p>
+                  <p class="description"><%-cv.languages[i+1].rank%></p>
+                </td>
+              </tr>
               <% } %>
-            </table>
+          </table>
         </div>
       </div>
       <div class="left-wrapper">
         <div class="left-four">
           <h3>Interests</h3>
-            <table class="interests-table">
-              <%for (i=0; i<cv.interests.length;i+=2) { %>
-                <tr>
-                  <td><%=cv.interests[i]%></td>
-                  <td><%=cv.interests[i+1]%></td> 
-                </tr>
+          <table class="interests-table">
+            <%for (i=0; i<cv.interests.length;i+=2) { %>
+              <tr>
+                <td>
+                  <%=cv.interests[i]%>
+                </td>
+                <td>
+                  <%=cv.interests[i+1]%>
+                </td>
+              </tr>
               <% } %>
-            </table>
+          </table>
         </div>
       </div>
     </div>
     <div class="right">
-        <h1 class="name"><%-cv.about.name.toUpperCase()%></h2>
-        <h2 class="role"><%-cv.about.role.join(', ')%></h2>
+      <h1 class="name"><%-cv.about.name.toUpperCase()%></h2>
+          <h2 class="role"><%-cv.about.role.join(', ')%></h2>
         <p class="bio"><%-cv.about.bio%> <%-cv.about.relocation%></p>
         <%
           const expLen = cv.experience.length-1
@@ -104,7 +119,7 @@
                 <tr class="text-row"> 
                   <td <%if (i!==0) {%>class="left-td padded-m"<% } %>></td>
                   <td rowspan="3" <%if (i!==0) {%>class="padded"<% } %>>
-                    <h3><%-department%></h3>
+                    <p class="department"><%-department%></p>
                     <p class="description"><%=begin%> - <%=end%> · <%-(Number.isInteger(Number(end)) ? end : new Date().getFullYear())-begin%> yr</p>
                   </td>
                 </tr>
@@ -121,20 +136,19 @@
                   <td rowspan="3" >
                       <p class="list-role">
                         <%-role%><span class="list-product"
-                          ><%=product && " · ".concat(product)%><%if (docs) {%> · <%docs.forEach(({url,type})=>{%><a
-                            class="badge <%-type==='prototype' ? 'figma' : 'github'%> small"
-                            href="<%-url%>"
-                            target="_blank"
-                          ></a
-                          ><%})%>
+                          ><%=product && " · ".concat(product)%>
                           </span>
-                        </span>
-                        <%} %>
                       </p>
                       <%if (stack) {%>
                       <p class="stack"><%=stack.join(" · ")%></p>
                       <%} %>
                       <p class="list-foot"><%=tasks.join(" · ")%></p>
+                      <%if (docs) {%><%docs.forEach(({url,type})=>{%>
+                          <a class="link" href="<%-url%>" target="_blank">
+                            <span>> link to portfolio</span>
+                          </a>
+                      <%})%>
+                      <%} %>
                     </td>
                 </tr>
                       <tr class="circle-row">

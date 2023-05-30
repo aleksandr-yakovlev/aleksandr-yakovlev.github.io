@@ -172,9 +172,6 @@
 }
 
 .list {
-  &-head {
-    margin: 0;
-  }
   &-foot {
     font-size: 12px;
     margin-top: 5px;
@@ -205,9 +202,9 @@
 }
 
 .badge.small {
-  width: 16px;
-  height: 16px;
-  background-size: 16px;
+  width: 12px;
+  height: 12px;
+  background-size: 12px;
 }
 
 .left-td.padded {
@@ -221,4 +218,25 @@
 
 .padded {
   padding-top: 20px;
+}
+
+.department {
+  font-weight: 600px;
+  font-size: 14px;
+  margin: 0 0 2px 0;
+}
+
+.link {
+  display: block;
+  padding-top: 3px;
+  text-decoration-line: underline;
+  color: gray;
+  font-size: 12px;
+  svg {
+    width: 10px;
+    height: 10px;
+  path {
+    fill: gray;
+  }
+}
 }

@@ -21,7 +21,7 @@
 .oasis {
   width: 89px;
   height: 43px;
-  background: url("https://aleksandr-yakovlev.surge.sh/icons/oasis.svg") center
+  background: url("https://aleksandr-yakovlev.github.io/icons/oasis.svg") center
     center no-repeat;
 }
 
@@ -47,13 +47,13 @@
       background-position: center center;
       background-repeat: no-repeat;
       &-techman {
-        background-image: url("https://aleksandr-yakovlev.surge.sh/vector/techman.svg");
+        background-image: url("https://aleksandr-yakovlev.github.io/vector/techman.svg");
       }
       &-bb8 {
-        background-image: url("https://aleksandr-yakovlev.surge.sh/vector/bb8.svg");
+        background-image: url("https://aleksandr-yakovlev.github.io/vector/bb8.svg");
       }
       &-pizza {
-        background-image: url("https://aleksandr-yakovlev.surge.sh/vector/pizza.svg");
+        background-image: url("https://aleksandr-yakovlev.github.io/vector/pizza.svg");
       }
     }
   }

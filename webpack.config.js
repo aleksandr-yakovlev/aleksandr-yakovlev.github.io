@@ -1,6 +1,7 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require("path");
 
 const pages = path.resolve(__dirname, "src", "pages");
@@ -61,7 +62,7 @@ module.exports = {
         include: pages,
       },
       {
-        test: /\.(pdf)$/,
+        test: /\.(pdf|png)$/,
         use: "file-loader?name=[path][name].[ext]",
         exclude: /(node_modules)/,
       },
@@ -102,6 +103,11 @@ module.exports = {
       template: path.resolve(PAGES.cv, "template.ejs"),
       chunks: ["common", "cv"],
     }),
+    new CopyWebpackPlugin({
+      patterns: [
+          { from: 'static' }
+      ]
+  }),
     new CleanWebpackPlugin(),
   ],
 };
