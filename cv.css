@@ -41,8 +41,13 @@
       margin-bottom: 4px;
     }
 
+.left h3 {
+    margin: 0 0 5px 0;
+  }
+
 .left h4 {
     margin: 0;
+    padding-top: 10px;
   }
 
 .left .list-foot {
