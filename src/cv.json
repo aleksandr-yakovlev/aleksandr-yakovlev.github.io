@@ -1,11 +1,8 @@
 {
   "about": {
     "name": "Aleksandr Yakovlev",
-    "role": [
-      "CTO",
-      "Technical Director"
-    ],
-    "bio": "IT enthusiast with 7+ years leadership experience in bringing product ideas to launch. Managing agile teams which are geographically distributed. I like engineering challenges, passionate in technologies, performance and architecture.",
+    "role": ["Technical Director", "Engineering Manager"],
+    "bio": "IT enthusiast with 8+ years leadership experience in bringing product ideas to launch. Managing agile teams which are geographically distributed. I like engineering challenges, passionate in technologies, performance and architecture.",
     "relocation": "Open to relocation on a global level.",
     "born year": 1989,
     "location": "Moscow, Russia",
@@ -34,7 +31,7 @@
             {
               "product": "Tablets&Visualization",
               "role": "Lead",
-              "begin": 2021,
+              "begin": 2022,
               "end": "present",
               "tasks": [
                 "KRA: architecture and process improvement, developer experience",
@@ -89,12 +86,7 @@
                 "Performed a platform audit",
                 "Built agile processes"
               ],
-              "stack": [
-                "React/TS",
-                "GraphQL",
-                "Java/Spring",
-                "Platform V"
-              ],
+              "stack": ["React/TS", "GraphQL", "Java/Spring", "Platform V"],
               "docs": [
                 {
                   "url": "https://hero.page/yakovlev/regtech",
@@ -229,13 +221,7 @@
       "Spark",
       "Ni-fi"
     ],
-    "DevOps": [
-      "Cloud-Native",
-      "Linux",
-      "Kubernetes",
-      "OpenShift",
-      "Jenkins"
-    ]
+    "DevOps": ["Cloud-Native", "Linux", "Kubernetes", "OpenShift", "Jenkins"]
   },
   "education": [
     {
@@ -271,10 +257,5 @@
       "rank": "Native"
     }
   ],
-  "interests": [
-    "Snowboard",
-    "Swimming",
-    "Traveling",
-    "Computer science"
-  ]
+  "interests": ["Snowboard", "Swimming", "Traveling", "Computer science"]
 }
