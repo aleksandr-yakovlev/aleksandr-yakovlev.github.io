@@ -1,3 +1,9 @@
-<%=_.template(require('./../common/head.html').default)({htmlWebpackPlugin})%>
-<%=_.template(require('./geek.html').default)({htmlWebpackPlugin})%>
-<%=_.template(require('./../common/scripts.html').default)({htmlWebpackPlugin})%>
+<% 
+    head=_.template(require('./../common/head.html').default)({htmlWebpackPlugin}),
+    geekPage=_.template(require('./geek.html').default),
+    scripts=_.template(require('./../common/scripts.html').default)({htmlWebpackPlugin})
+    jsonPath='/cv.json'
+%>
+<%=head%>
+<%=geekPage({jsonPath})%>
+<%=scripts%>

@@ -42,20 +42,7 @@
                 "Implemented feature management and error tracking",
                 "Released ui-kit"
               ],
-              "stack": [
-                "React/TS",
-                "WebGL",
-                "ROS2",
-                "WebSocket",
-                "GLB",
-                "JRPC"
-              ],
-              "docs": [
-                {
-                  "url": "https://hero.page/yakovlev/autotech",
-                  "type": "link"
-                }
-              ]
+              "stack": ["React/TS", "WebGL", "ROS2", "WebSocket", "GLB", "JRPC"]
             }
           ]
         }
@@ -86,13 +73,7 @@
                 "Performed a platform audit",
                 "Built agile processes"
               ],
-              "stack": ["React/TS", "GraphQL", "Java/Spring", "Platform V"],
-              "docs": [
-                {
-                  "url": "https://hero.page/yakovlev/regtech",
-                  "type": "link"
-                }
-              ]
+              "stack": ["React/TS", "GraphQL", "Java/Spring", "Platform V"]
             }
           ]
         },
@@ -250,7 +231,7 @@
   "languages": [
     {
       "language": "English",
-      "rank": "Minimum Professional Proficiency"
+      "rank": "B2"
     },
     {
       "language": "Russian",

@@ -136,7 +136,8 @@ module.exports = (env, argv) => {
     }),
     new CopyWebpackPlugin({
       patterns: [
-          { from: 'static' }
+          { from: 'static' },
+          { from: 'src/cv.json', to: 'cv.json' }
       ]
   }),
     new CleanWebpackPlugin(),
