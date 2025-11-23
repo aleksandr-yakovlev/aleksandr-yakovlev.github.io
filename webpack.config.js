@@ -13,19 +13,26 @@ const PAGES = {
   cv: path.resolve(pages, "cv"),
 };
 
-module.exports = {
-  entry: {
-    common: PAGES.common,
-    main: PAGES.main,
-    geek: PAGES.geek,
-    cv: PAGES.cv,
-  },
+module.exports = (env, argv) => {
+  const isProduction = argv.mode === 'production';
+  
+  return {
+    mode: isProduction ? 'production' : 'development',
+    entry: {
+      common: PAGES.common,
+      main: PAGES.main,
+      geek: PAGES.geek,
+      cv: PAGES.cv,
+    },
   output: {
     path: path.resolve(__dirname, "build"),
-    filename: "[name].[hash].bundle.js",
+    filename: "[name].[contenthash].bundle.js",
+    publicPath: "/",
   },
   devServer: {
-    contentBase: "dist",
+    static: {
+      directory: path.join(__dirname, "build"),
+    },
     compress: true,
     port: 3000,
     hot: true,
@@ -62,8 +69,18 @@ module.exports = {
         include: pages,
       },
       {
+        test: /\.ejs$/,
+        loader: "ejs-loader",
+        options: {
+          esModule: false,
+        },
+      },
+      {
         test: /\.(pdf|png)$/,
-        use: "file-loader?name=[path][name].[ext]",
+        type: "asset/resource",
+        generator: {
+          filename: "[path][name][ext]",
+        },
         exclude: /(node_modules)/,
       },
     ],
@@ -78,30 +95,44 @@ module.exports = {
       },
     },
   },
+  performance: {
+    maxAssetSize: 500000,
+    maxEntrypointSize: 500000,
+    hints: isProduction ? 'warning' : false,
+  },
   plugins: [
     new MiniCssExtractPlugin({
-      chunkFilename: "style.[hash].bundle.css",
+      chunkFilename: "style.[contenthash].bundle.css",
     }),
     new HtmlWebpackPlugin({
       inject: false,
-      hash: true,
       filename: "index.html",
       template: path.resolve(PAGES.main, "template.ejs"),
       chunks: ["common", "main"],
+      loader: "ejs-loader",
+      templateParameters: {
+        _: require("lodash"),
+      },
     }),
     new HtmlWebpackPlugin({
       inject: false,
-      hash: true,
       filename: "geek.html",
       template: path.resolve(PAGES.geek, "template.ejs"),
       chunks: ["common", "geek"],
+      loader: "ejs-loader",
+      templateParameters: {
+        _: require("lodash"),
+      },
     }),
     new HtmlWebpackPlugin({
       inject: false,
-      hash: true,
       filename: "cv.html",
       template: path.resolve(PAGES.cv, "template.ejs"),
       chunks: ["common", "cv"],
+      loader: "ejs-loader",
+      templateParameters: {
+        _: require("lodash"),
+      },
     }),
     new CopyWebpackPlugin({
       patterns: [
@@ -110,4 +141,5 @@ module.exports = {
   }),
     new CleanWebpackPlugin(),
   ],
+  };
 };
