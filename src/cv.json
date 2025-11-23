@@ -7,6 +7,7 @@
     "born year": 1989,
     "location": "Moscow, Russia",
     "email": "aleksandr.yakovlev@live.com",
+    "linkedin": "https://www.linkedin.com/in/asyakovlev/",
     "site": "https://aleksandr-yakovlev.github.io",
     "github": "https://github.com/aleksandr-yakovlev",
     "telegram": "https://t.me/stedman",
@@ -166,5 +167,5 @@
       "rank": "Native"
     }
   ],
-  "interests": ["Traveling", "Computer science", "Snowboard", "Swimming"]
+  "interests": ["Traveling", "Snowboard", "Swimming", "Computer science"]
 }

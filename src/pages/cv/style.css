@@ -32,9 +32,6 @@ body #root,
   height: 100%;
   display: flex;
   flex-direction: row;
-  & > div {
-    padding-top: 15px;
-  }
 }
 
 .left {
@@ -43,9 +40,17 @@ body #root,
   color: #fff;
   padding-left: 20px;
   &-wrapper {
-    padding: 0px 10px 10px 10px;
+    &:first-child {
+      padding-right: 10px;
+      padding-bottom: 0px;
+    }
+    padding-bottom: 10px;
+
     &:not(:last-child) {
       border-bottom: white 1px solid;
+    }
+    H3 {
+      margin: 10px 0;
     }
   }
   &-one {
@@ -69,11 +74,20 @@ body #root,
     margin: 0;
     font-size: 12px;
   }
+  &-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: none;
+    td {
+      padding: 0px;
+    }
+  }
 }
 
 .right {
   width: 15.5cm;
-  padding: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .ava {
@@ -97,26 +111,6 @@ body #root,
 
 .text {
   padding-left: 3px;
-}
-
-.name {
-  margin-bottom: 5px;
-}
-
-.role {
-  margin-top: 0;
-  font-weight: normal;
-}
-
-.title {
-  margin-bottom: 0;
-  border-bottom: black 1px solid;
-  padding: 15px 0px 10px 10px;
-
-  &.experience {
-    margin-top: 0px;
-    padding: 0px 0px 10px 10px;
-  }
 }
 
 .circle {
@@ -143,16 +137,15 @@ body #root,
 }
 
 .etable {
-  max-width: 700px;
-  padding-left: 20px;
+  padding-top: 2px;
+  padding-left: 10px;
   border-spacing: 0px;
   td {
     vertical-align: top;
   }
 
   .company {
-    margin: 0 0 0 -10px;
-    padding: 15px 0 10px 0;
+    margin: 5px 0 5px -10px;
   }
 
   .description,
@@ -186,31 +179,22 @@ body #root,
 
 .bio {
   color: gray;
-  margin-bottom: 0px;
+  margin: 0px;
+  text-align: justify;
 }
 
 .interests-table td {
-  padding: 0px 10px 10px 0px;
+  padding: 0px 5px 10px 0px;
   color: gray;
   font-size: 12px;
 }
 
-.languages-table td {
-  max-width: 130px;
-  vertical-align: top;
-  p {
-    margin: 0px 0px 5px 0px;
+.languages-table {
+  td {
+    &:not(:first-child) {
+      padding-left: 10px;
+    }
   }
-  &:not(:first-child) {
-    padding-left: 10px;
-  }
-}
-
-.stack {
-  padding-top: 3px;
-  color: gray;
-  font-size: 12px;
-  margin: 0;
 }
 
 .list {
@@ -247,20 +231,45 @@ body #root,
 
 .left-td.padded {
   &-s {
-    padding-top: 20px;
+    padding-top: 10px;
   }
   &-m {
-    padding-top: 30px;
+    padding-top: 20px;
   }
 }
 
 .padded {
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .role {
-  font-size: 14px;
-  margin: 0 0 2px 0;
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  &-left {
+    flex-shrink: 0;
+  }
+  &-right {
+    text-align: right;
+    margin-left: auto;
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+    .stack {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow-y: hidden;
+      color: gray;
+      font-size: 10px;
+      margin: 0;
+    }
+  }
+  &-name {
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0 0 2px 0;
+  }
 }
 
 .link {
@@ -279,15 +288,53 @@ body #root,
 }
 
 .header {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  width: 100%;
+  height: 170px;
 
-  .qr {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 150px;
+  &-padding {
+    padding-top: 15px;
   }
+  &-end {
+    margin: 0 0 5px 0;
+    margin-top: auto;
+  }
+
+  &-right {
+    border-bottom: black 1px solid;
+    display: flex;
+    flex-direction: column;
+
+    &-top {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      width: 100%;
+      height: 100%;
+
+      .header-start {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .qr {
+        padding-top: 10px;
+      }
+
+      .name {
+        margin: 0px;
+      }
+
+      .role {
+        margin: 0 0 5px 0;
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+.program {
+  margin: 5px 0 0 0;
+}
+
+.education {
+  margin: 15px 0 5px 0;
 }
