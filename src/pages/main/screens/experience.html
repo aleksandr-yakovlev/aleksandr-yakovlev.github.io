@@ -1,26 +1,13 @@
 <div class="experience">
   <h1>Experience</h1>
-  <%experience.forEach(e => { e.departments && e.departments.forEach (({department, begin, end, products}) => {%>
+  <%experience.forEach(e => { e.roles && e.roles.forEach (({role, begin, end, tasks, stack}) => {%>
   <h3 class="list-head">
-    <%-e.company.name%><span class="list-department"> · <%-department%></span>
+    <%-e.company.name%><span class="list-department"> · <%-role%></span>
   </h3>
   <p class="list-period"><%-begin%> - <%-end%></p>
-  <%products && products.forEach(({role, product, tasks, stack, docs}) => {%>
-  <p class="list-role">
-    <%-role%><span class="list-product"
-      ><%=product && " · ".concat(product)%><%if (docs) {%> · <%docs.forEach(({url,type})=>{%><a
-        class="badge <%-type==='prototype' ? 'figma' : 'github'%> small"
-        href="<%-url%>"
-        target="_blank"
-      ></a
-      ><%})%>
-      </span>
-    </span>
-    <%} %>
-  </p>
-  <%if (stack) {%>
-  <p class="stack"><%=stack.join(" · ")%></p>
+  <%if (stack && stack.length > 0) {%>
+  <p class="stack"><%=stack.join(" · ")%></p>
   <%} %>
-  <p class="list-foot"><%=tasks.join(" · ")%></p>
-  <% }) %> <% }) }) %>
+  <p class="list-foot"><%=tasks.join(" · ")%></p>
+  <% }) }) %>
 </div>

@@ -2,7 +2,7 @@
   "about": {
     "name": "Aleksandr Yakovlev",
     "role": ["Technical Director", "Engineering Manager"],
-    "bio": "IT enthusiast with 8+ years leadership experience in bringing product ideas to launch. Managing agile teams which are geographically distributed. I like engineering challenges, passionate in technologies, performance and architecture.",
+    "bio": "IT enthusiast with 10+ years leadership experience in bringing product ideas to launch. Managing agile teams which are geographically distributed. I like engineering challenges, passionate in technologies, performance and architecture.",
     "relocation": "Open to relocation on a global level.",
     "born year": 1989,
     "location": "Moscow, Russia",
@@ -19,31 +19,33 @@
   "experience": [
     {
       "company": {
-        "name": "Autotech",
-        "site": "https://sberautotech.ru/"
+        "name": "Navio",
+        "site": "https://navio.auto/"
       },
-      "departments": [
+      "roles": [
         {
-          "department": "Web&Mobile Apps",
+          "role": "Technical & Product Manager",
           "begin": 2022,
           "end": "present",
-          "products": [
-            {
-              "product": "Tablets&Visualization",
-              "role": "Lead",
-              "begin": 2022,
-              "end": "present",
-              "tasks": [
-                "KRA: architecture and process improvement, developer experience",
-                "Formed the frontend team of the company",
-                "Built the release processes for vehicle on-premise software",
-                "Created a new product for 3D visualization of ROS2",
-                "Released a new features: taxi, vehicle equipment control, notification system, authorization, feedback, engineering menu",
-                "Implemented feature management and error tracking",
-                "Released ui-kit"
-              ],
-              "stack": ["React/TS", "WebGL", "ROS2", "WebSocket", "GLB", "JRPC"]
-            }
+          "tasks": [
+            "Defined and executed AI technology strategy: architecture, operating model, and scalable ecosystem of AI assistants embedded into business processes",
+            "Built an enterprise-grade RAG platform and conversational agents for production-data analysis, accelerating knowledge access and operational insights",
+            "Developed a data-driven decision-support system leveraging behavioral and operational signals to improve project delivery and team performance",
+            "Developed components for autonomous mobility: driver and passenger apps, real-time 3D visualization, and a screencast platform",
+            "Built multiple engineering teams"
+          ],
+          "stack": [
+            "Python",
+            "C++",
+            "TS/React",
+            "LLM",
+            "LangChain",
+            "ArangoDB",
+            "Milvus",
+            "WebGL",
+            "ROS2",
+            "GLB",
+            "JRPC"
           ]
         }
       ]
@@ -53,60 +55,38 @@
         "name": "Sber",
         "site": "https://sber.ru/"
       },
-      "departments": [
+      "roles": [
         {
-          "department": "CIB",
-          "tribe": "Products for Regions",
+          "role": "Head of Development / Platform Engineering Lead",
           "begin": 2020,
           "end": 2022,
-          "products": [
-            {
-              "product": "Products on Platform V",
-              "role": "Teamlead",
-              "begin": 2020,
-              "end": 2022,
-              "tasks": [
-                "Designed application architecture for SaaS based on Platform V and standalone",
-                "Hired dev team (back, front)",
-                "Advised on platform development",
-                "Leaded frontend development",
-                "Performed a platform audit",
-                "Built agile processes"
-              ],
-              "stack": ["React/TS", "GraphQL", "Java/Spring", "Platform V"]
-            }
-          ]
+          "tasks": [
+            "Built and managed a distributed team of 70+ engineers across internal, external, and client environments",
+            "Standardized engineering practices (CI/CD, QA, code review, agile) and enabled clients to independently develop and operate solutions",
+            "Delivered PoCs to production as SaaS products; implemented multitenant architecture reducing TCO and improving scalability",
+            "Led presales, technical consulting, and architectural design for enterprise projects"
+          ],
+          "stack": ["TS/React", "Java/Spring", "Ionic", "Platform V"]
         },
         {
-          "department": "Reliability",
+          "role": "Team Lead / Senior Developer",
           "begin": 2015,
           "end": 2020,
-          "products": [
-            {
-              "product": "Analytical system",
-              "role": "Teamlead",
-              "begin": 2015,
-              "end": 2020,
-              "tasks": [
-                "Bringed product idea to prod",
-                "Designed cloud-native architecture",
-                "Formed product agile teams, and full HR-cycle",
-                "Used columnar database with MPP for 10TB data with real-time update",
-                "Provided application support"
-              ],
-              "stack": [
-                "TS/React",
-                "Node.js",
-                "ClickHouse",
-                "Greenplum",
-                "ELK",
-                "Superset",
-                "Kafka",
-                "NiFi",
-                "OpenShift",
-                "Keycloak"
-              ]
-            }
+          "tasks": [
+            "Architected a 10TB analytical platform integrating 20+ data sources with MPP processing",
+            "Drove agile transformation improving transparency and delivery velocity",
+            "Built data-driven service quality monitoring used in executive decision-making",
+            "Presented technical solutions to C-level stakeholders and influenced key strategic initiatives"
+          ],
+          "stack": [
+            "TS/React",
+            "Node.js",
+            "ClickHouse",
+            "Greenplum",
+            "ELK",
+            "Superset",
+            "Kafka",
+            "NiFi"
           ]
         }
       ]
@@ -116,57 +96,29 @@
         "name": "Alfabank",
         "site": "https://alfabank.com/"
       },
-      "departments": [
+      "roles": [
         {
-          "department": "Improvement of regional technologies",
+          "role": "Infrastructure & Software Engineer",
           "begin": 2011,
           "end": 2015,
-          "products": [
-            {
-              "role": "Middle developer",
-              "begin": 2013,
-              "end": 2015,
-              "tasks": [
-                "Developed DWH",
-                "Developed frontends for local services",
-                "Built support processes based on ITIL"
-              ]
-            },
-            {
-              "role": "Middle engineer",
-              "begin": 2011,
-              "end": 2013,
-              "tasks": [
-                "Provided infrastructure management and IT setup for new offices",
-                "Built support processes on local offices",
-                "Interacted with contractors",
-                "Formed the IT budget"
-              ]
-            }
+          "tasks": [
+            "Automated core ITSM processes, delivered BI and monitoring systems, and ensured architectural compliance",
+            "Supported and evolved network and service infrastructure across regional branches"
           ]
         }
       ]
     },
     {
       "company": {
-        "name": "Previous experience"
+        "name": "Trust bank"
       },
-      "departments": [
+      "roles": [
         {
-          "department": "Local Teams",
-          "begin": 2005,
+          "role": "Infrastructure Engineer",
+          "begin": 2010,
           "end": 2011,
-          "products": [
-            {
-              "role": "Engineer",
-              "begin": 2013,
-              "end": 2015,
-              "tasks": [
-                "Supported local offices",
-                "IT budget management",
-                "Outsourcing"
-              ]
-            }
+          "tasks": [
+            "Maintained branch IT infrastructure: networks, ATMs, servers, and workstations; coordinated with vendors"
           ]
         }
       ]
@@ -174,6 +126,8 @@
   ],
   "skills": {
     "Management": [
+      "AI/LLM Integration",
+      "Product Strategy",
       "Research & Strategy",
       "Public Speaking",
       "Flexibility",
@@ -231,7 +185,7 @@
   "languages": [
     {
       "language": "English",
-      "rank": "B2"
+      "rank": "B1"
     },
     {
       "language": "Russian",

@@ -100,72 +100,67 @@
         <p class="bio"><%-cv.about.bio%> <%-cv.about.relocation%></p>
         <%
           const expLen = cv.experience.length-1
-          const posLen = cv.experience[expLen].departments.length-1
+          const posLen = cv.experience[expLen].roles.length-1
         %>
-        <h3 class="title">Experience <span class="description"> · <%-(Number.isInteger(Number(cv.experience[0].departments[0].end)) ? cv.experience[0].departments[0].end : new Date().getFullYear())-cv.experience[expLen].departments[posLen].begin%> yr</span></h3>
-          <%cv.experience.forEach(({company, departments}) => { 
-            const len = departments?.length - 1
+        <h3 class="title">Experience <span class="description"> · <%-(Number.isInteger(Number(cv.experience[0].roles[0].end)) ? cv.experience[0].roles[0].end : new Date().getFullYear())-cv.experience[expLen].roles[posLen].begin%> yr</span></h3>
+        <table class="etable">
+          <%cv.experience.forEach(({company, roles}, companyIndex) => {
+            const len = roles?.length - 1
+            const isLastCompany = companyIndex === cv.experience.length - 1
           %>
-            <%if (departments?.length > 0 ) {%>
-            <table class="etable">
-             
-              <h3 class="company">
-                <%=company.site && `<a href="${company.site}">`%>
-                  <span><%=company.name%></span><span class="description"> · <%-(Number.isInteger(Number(departments[0].end)) ? departments[0].end : new Date().getFullYear())-departments[len].begin%> yr</span>
-                <%=company.site && "</a>"%>
-              </h3>
-          
-              <%departments?.forEach(({department, role, products, begin, end}, i) => { %>
+            <%if (roles?.length > 0 ) {%>
+              <tr class="text-row">
+                <td colspan="2" <%if (companyIndex !== 0) {%>class="left-td"<% } %>>
+                  <h3 class="company">
+                    <%=company.site && `<a href="${company.site}">`%>
+                      <span><%=company.name%></span><span class="description"> · <%-(Number.isInteger(Number(roles[0].end)) ? roles[0].end : new Date().getFullYear())-roles[len].begin%> yr</span>
+                    <%=company.site && "</a>"%>
+                  </h3>
+                </td>
+              </tr>
+              <tr class="line-row">
+                <td class="left-td"></td>
+              </tr>
+              <%roles?.forEach(({role, begin, end, tasks, stack}, i) => { 
+                const isLastRole = i === roles.length - 1
+                const shouldShowLine = !isLastRole || !isLastCompany
+                const needsPadding = i !== 0
+                const manyRoles = roles.length > 1
+              %>
                 <tr class="text-row"> 
-                  <td <%if (i!==0) {%>class="left-td padded-m"<% } %>></td>
-                  <td rowspan="3" <%if (i!==0) {%>class="padded"<% } %>>
-                    <p class="department"><%-department%></p>
-                    <p class="description"><%=begin%> - <%=end%> · <%-(Number.isInteger(Number(end)) ? end : new Date().getFullYear())-begin%> yr</p>
+                  <td <%if (needsPadding) {%>class="left-td padded-m"<% } else {%>class="left-td"<% } %>></td>
+                  <td rowspan="<%=shouldShowLine ? '3' : '2'%>" <%if (needsPadding) {%>class="padded"<% } %>>
+                    <p class="department"><%-role%></p>
+                    <p class="description"><%=begin%> - <%=end%><%if (manyRoles) {%> · <%-(Number.isInteger(Number(end)) ? end : new Date().getFullYear())-begin%> yr<%} %></p>
                   </td>
                 </tr>
-                  <tr class="circle-row">
-                    <td>
-                      <div class="circle fill"></div>
+                <tr class="circle-row">
+                  <td>
+                    <div class="circle"></div>
                   </td>
+                </tr>
+                <%if (shouldShowLine) {%>
                 <tr class="line-row">
                   <td class="left-td"></td>
                 </tr>
-                    <%products && products.forEach(({role, product, tasks, stack, docs}) => {%>
-                      <tr class="text-row"> 
-                  <td  class="left-td padded-s"></td>
-                  <td rowspan="3" >
-                      <p class="list-role">
-                        <%-role%><span class="list-product"
-                          ><%=product && " · ".concat(product)%>
-                          </span>
-                      </p>
-                      <%if (stack) {%>
-                      <p class="stack"><%=stack.join(" · ")%></p>
+                <%} %>
+                <%if ((stack && stack.length > 0) || (tasks && tasks.length > 0)) {%>
+                  <tr class="text-row"> 
+                    <td class="left-td padded-s"></td>
+                    <td>
+                      <%if (stack && stack.length > 0) {%>
+                      <p class="stack"><%=stack.join(" · ")%></p>
                       <%} %>
-                      <p class="list-foot"><%=tasks.join(" · ")%></p>
-                      <%if (docs) {%><%docs.forEach(({url,type})=>{%>
-                          <a class="link" href="<%-url%>" target="_blank">
-                            <span>> link to portfolio</span>
-                          </a>
-                      <%})%>
+                      <%if (tasks && tasks.length > 0) {%>
+                      <p class="list-foot"><%=tasks.join(" · ")%></p>
                       <%} %>
                     </td>
-                </tr>
-                      <tr class="circle-row">
-                    <td>
-                      <div class="circle"></div>
-                  </td>
-                <tr class="line-row">
-                  <td class="left-td"></td>
-                </tr>
-                       <% }) %> 
-                    
-            <% }) %> 
-          </table>
-        <% } else {%>   
-     
-        <% } %>
-        <% }) %>  
+                  </tr>
+                <%} %>
+              <% }) %> 
+            <% } %>
+          <% }) %>
+        </table>  
          <h3 class="title">Education</h3>
             <%cv.education.forEach(({institution, programmes}) => { %>
               <h3 class="company">
