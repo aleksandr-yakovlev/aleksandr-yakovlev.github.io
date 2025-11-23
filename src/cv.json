@@ -35,13 +35,14 @@
             "Built multiple engineering teams"
           ],
           "stack": [
+            "TS/React",
             "Python",
             "C++",
-            "TS/React",
             "LLM",
             "LangChain",
             "ArangoDB",
             "Milvus",
+            "n8n",
             "WebGL",
             "ROS2",
             "GLB",
@@ -125,38 +126,11 @@
     }
   ],
   "skills": {
-    "Management": [
-      "AI/LLM Integration",
-      "Product Strategy",
-      "Research & Strategy",
-      "Public Speaking",
-      "Flexibility",
-      "Agile",
-      "ITSM"
-    ],
-    "Frontend": [
-      "ES6/ES7",
-      "TypeScript",
-      "React",
-      "Node.js",
-      "WebGL",
-      "Jest",
-      "Webpack",
-      "Git"
-    ],
-    "Data": [
-      "Data Vault",
-      "Streaming",
-      "Cleansing",
-      "Visualization",
-      "Kafka",
-      "ClickHouse",
-      "Greenplum",
-      "ELK",
-      "Spark",
-      "Ni-fi"
-    ],
-    "DevOps": ["Cloud-Native", "Linux", "Kubernetes", "OpenShift", "Jenkins"]
+    "Management": ["Product Strategy", "Agile", "ITSM"],
+    "AI": ["LLM", "Agents", "ArangoDB", "Milvus", "n8n"],
+    "Frontend": ["ES6/ES7", "TS/React", "WebGL"],
+    "Data": ["BI", "Kafka", "ClickHouse", "ELK"],
+    "DevOps": ["Cloud-Native", "Linux", "Kubernetes"]
   },
   "education": [
     {
@@ -192,5 +166,5 @@
       "rank": "Native"
     }
   ],
-  "interests": ["Snowboard", "Swimming", "Traveling", "Computer science"]
+  "interests": ["Traveling", "Computer science", "Snowboard", "Swimming"]
 }

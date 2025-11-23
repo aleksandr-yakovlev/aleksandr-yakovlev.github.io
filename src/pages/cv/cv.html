@@ -52,9 +52,9 @@
         <div class="left-two"></div>
         <h3>Skills</h3>
         <%Object.keys(cv.skills).forEach(skill=> { %>
-          <h4 class="list-head"><%-skill%></h4>
+          <p class="list-head"><%-skill%></p>
           <p class="list-foot"><span>
-              <%=cv.skills[skill].join(" </span><span>|&nbsp;")%></p>
+              <%=cv.skills[skill].join(" </span><span>·&nbsp;")%></p>
           <% }) %>
       </div>
       <div class="left-wrapper">
@@ -110,7 +110,7 @@
           %>
             <%if (roles?.length > 0 ) {%>
               <tr class="text-row">
-                <td colspan="2" <%if (companyIndex !== 0) {%>class="left-td"<% } %>>
+                <td colspan="2">
                   <h3 class="company">
                     <%=company.site && `<a href="${company.site}">`%>
                       <span><%=company.name%></span><span class="description"> · <%-(Number.isInteger(Number(roles[0].end)) ? roles[0].end : new Date().getFullYear())-roles[len].begin%> yr</span>
@@ -130,7 +130,7 @@
                 <tr class="text-row"> 
                   <td <%if (needsPadding) {%>class="left-td padded-m"<% } else {%>class="left-td"<% } %>></td>
                   <td rowspan="<%=shouldShowLine ? '3' : '2'%>" <%if (needsPadding) {%>class="padded"<% } %>>
-                    <p class="department"><%-role%></p>
+                    <p class="role"><%-role%></p>
                     <p class="description"><%=begin%> - <%=end%><%if (manyRoles) {%> · <%-(Number.isInteger(Number(end)) ? end : new Date().getFullYear())-begin%> yr<%} %></p>
                   </td>
                 </tr>
@@ -162,20 +162,28 @@
           <% }) %>
         </table>  
          <h3 class="title">Education</h3>
+         <table class="etable">
             <%cv.education.forEach(({institution, programmes}) => { %>
-              <h3 class="company">
-                <a href="<%-institution.site%>">
+              <tr class="text-row">
+                <td colspan="2">
+                  <h3 class="company">
+                    <a href="<%-institution.site%>">
                  <span><%=institution.name%></span>
                 </a>
-              </h3>
-              <table class="etable">
+                  </h3>
+                </td>
+              </tr>
+              <tr class="line-row">
+                <td class="left-td"></td>
+              </tr>
                 <%programmes.forEach(({major, end, level},i) => { %>
                   <tr class="text-row"> 
-                    <td  <%if (i!==0) {%>class="left-td"<% } %>></td>
-                    <td rowspan="3">
-                      <h3>
-                        <%-major%><span class="description"><%=` · ${end}`%></span>
-                      </h3>
+                    <td  class="left-td <%if (i!==0) {%> padded-m<% } %>"></td>
+                    <td rowspan="3"  <%if (i!==0) {%>class="padded"<% } %>>
+                      <p class="role">
+                        <span><%-major%></span>
+                        <span class="description"><%=` · ${end}`%></span>
+                      </p>
                       <p class="description"><%-level%></p>
                     </td>
                   </tr>
@@ -188,8 +196,8 @@
                     <td class="left-td"></td>
                   </tr>
               <% }) %>   
-              </table>
-            <% }) %>   
+            <% }) %>
+          </table>   
     </div>
   </div>
 </div>
