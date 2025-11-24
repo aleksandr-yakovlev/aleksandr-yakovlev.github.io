@@ -102,13 +102,6 @@ body #root,
 .bage {
   color: white;
 }
-
-.icon,
-.text {
-  vertical-align: middle;
-  display: inline-block;
-}
-
 .text {
   padding-left: 3px;
 }
