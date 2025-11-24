@@ -194,10 +194,8 @@ body {
   }
 
 .info-badge a:not(:first-child) {
-      padding-left: 15px;
+      margin-left: 15px;
     }
-
-
 
 .row {
   position: absolute;
@@ -209,11 +207,7 @@ body {
   animation: pulse 3s infinite;
 }
 
-
-
 @media screen and (max-width: 680px) {
-
-
 
 .row {
     display: none;

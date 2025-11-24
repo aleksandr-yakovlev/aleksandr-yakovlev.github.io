@@ -106,6 +106,7 @@ body #root,
     border-radius: 50%;
     border: white 2px solid;
     width: 100px;
+    height: 100px;
   }
 
 .bage {
