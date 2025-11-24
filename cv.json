@@ -1,0 +1,171 @@
+{
+  "about": {
+    "name": "Aleksandr Yakovlev",
+    "role": ["Technical Director", "Engineering Manager"],
+    "bio": "IT enthusiast with 10+ years leadership experience in bringing product ideas to launch. Managing agile teams which are geographically distributed. I like engineering challenges, passionate in technologies, performance and architecture.",
+    "relocation": "Open to relocation on a global level.",
+    "born year": 1989,
+    "location": "Moscow, Russia",
+    "email": "aleksandr.yakovlev@live.com",
+    "linkedin": "https://www.linkedin.com/in/asyakovlev/",
+    "site": "https://aleksandr-yakovlev.github.io",
+    "github": "https://github.com/aleksandr-yakovlev",
+    "telegram": "https://t.me/stedman",
+    "phone": "+7 (963) 200-08-09"
+  },
+  "summary": {
+    "leadership": "since 2015",
+    "software development": "since 2010"
+  },
+  "experience": [
+    {
+      "company": {
+        "name": "Navio",
+        "site": "https://navio.auto/"
+      },
+      "roles": [
+        {
+          "role": "Technical & Product Manager",
+          "begin": 2022,
+          "end": "present",
+          "tasks": [
+            "Defined and executed AI technology strategy: architecture, operating model, and scalable ecosystem of AI assistants embedded into business processes",
+            "Built an enterprise-grade RAG platform and conversational agents for production-data analysis, accelerating knowledge access and operational insights",
+            "Developed a data-driven decision-support system leveraging behavioral and operational signals to improve project delivery and team performance",
+            "Developed components for autonomous mobility: driver and passenger apps, real-time 3D visualization, and a screencast platform",
+            "Built multiple engineering teams"
+          ],
+          "stack": [
+            "TS/React",
+            "Python",
+            "C++",
+            "LLM",
+            "LangChain",
+            "ArangoDB",
+            "Milvus",
+            "n8n",
+            "WebGL",
+            "ROS2",
+            "GLB",
+            "JRPC"
+          ]
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "Sber",
+        "site": "https://sber.ru/"
+      },
+      "roles": [
+        {
+          "role": "Head of Development / Platform Engineering Lead",
+          "begin": 2020,
+          "end": 2022,
+          "tasks": [
+            "Built and managed a distributed team of 70+ engineers across internal, external, and client environments",
+            "Standardized engineering practices (CI/CD, QA, code review, agile) and enabled clients to independently develop and operate solutions",
+            "Delivered PoCs to production as SaaS products; implemented multitenant architecture reducing TCO and improving scalability",
+            "Led presales, technical consulting, and architectural design for enterprise projects"
+          ],
+          "stack": ["TS/React", "Java/Spring", "Ionic", "Platform V"]
+        },
+        {
+          "role": "Team Lead / Senior Developer",
+          "begin": 2015,
+          "end": 2020,
+          "tasks": [
+            "Architected a 10TB analytical platform integrating 20+ data sources with MPP processing",
+            "Drove agile transformation improving transparency and delivery velocity",
+            "Built data-driven service quality monitoring used in executive decision-making",
+            "Presented technical solutions to C-level stakeholders and influenced key strategic initiatives"
+          ],
+          "stack": [
+            "TS/React",
+            "Node.js",
+            "ClickHouse",
+            "Greenplum",
+            "ELK",
+            "Superset",
+            "Kafka",
+            "NiFi"
+          ]
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "Alfabank",
+        "site": "https://alfabank.com/"
+      },
+      "roles": [
+        {
+          "role": "Infrastructure & Software Engineer",
+          "begin": 2011,
+          "end": 2015,
+          "tasks": [
+            "Automated core ITSM processes, delivered BI and monitoring systems, and ensured architectural compliance",
+            "Supported and evolved network and service infrastructure across regional branches"
+          ]
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "Trust bank"
+      },
+      "roles": [
+        {
+          "role": "Infrastructure Engineer",
+          "begin": 2010,
+          "end": 2011,
+          "tasks": [
+            "Maintained branch IT infrastructure: networks, ATMs, servers, and workstations; coordinated with vendors"
+          ]
+        }
+      ]
+    }
+  ],
+  "skills": {
+    "Management": ["Product Strategy", "Agile", "ITSM"],
+    "AI": ["LLM", "Agents", "ArangoDB", "Milvus", "n8n"],
+    "Frontend": ["ES6/ES7", "TS/React", "WebGL"],
+    "Data": ["BI", "Kafka", "ClickHouse", "ELK"],
+    "DevOps": ["Cloud-Native", "Linux", "Kubernetes"]
+  },
+  "education": [
+    {
+      "institution": {
+        "name": "Northern (Arctic) Federal University named after M.V. Lomonosov",
+        "site": "https://narfu.ru/en/"
+      },
+      "programmes": [
+        {
+          "department": "Institute of Information and Space Technologies",
+          "major": "Information Systems and Technologies",
+          "level": "Developer (University)",
+          "begin": "2009",
+          "end": "2012"
+        },
+        {
+          "department": "College of Telecommunications and Information Technology",
+          "major": "Computer Software",
+          "level": "Developer (College)",
+          "begin": "2006",
+          "end": "2009"
+        }
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "rank": "B1"
+    },
+    {
+      "language": "Russian",
+      "rank": "Native"
+    }
+  ],
+  "interests": ["Traveling", "Snowboard", "Swimming", "Computer science"]
+}

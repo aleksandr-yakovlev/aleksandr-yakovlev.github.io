@@ -211,7 +211,10 @@
   font-size: 13px;
   cursor: pointer;
   white-space: nowrap;
-  -moz-user-select: none;
-       user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  text-decoration: none;
+  color: inherit;
 }
 
