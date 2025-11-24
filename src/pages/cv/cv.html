@@ -7,19 +7,19 @@
         </div>
 		<div class="left-one">
 			<a href="<%-cv.about.telegram%>" target="_blank">
-				  <%=icons.telegram%>
+				  <img src="<%=icons.telegram%>" alt="telegram" />
 			</a>
 			<a href="<%-cv.about.linkedin%>" target="_blank">
-				  <%=icons.linkedin%>
+        <img src="<%=icons.linkedin%>" alt="linkedin" />
 			</a>
           <a href="<%-cv.about.github%>">
-              <%=icons.github%>
+            <img src="<%=icons.github%>" alt="github" />
           </a>
           <a href="mailto:<%-cv.about.email%>">
-              <%=icons.mail%>
+            <img src="<%=icons.mail%>" alt="mail" />
           </a>
           <a href="Tel:<%-cv.about.phone%>">
-              <%=icons.phone%>
+            <img src="<%=icons.phone%>" alt="phone" />
           </a>
         </div>
       </div>
@@ -27,8 +27,7 @@
         <h3>Skills</h3>
         <%Object.keys(cv.skills).forEach(skill=> { %>
           <p class="left-head"><%-skill%></p>
-          <p class="left-foot"><span>
-              <%=cv.skills[skill].join(" </span><span>·&nbsp;")%></p>
+          <p class="left-foot"><span><%=cv.skills[skill].join(" </span><span>·&nbsp;")%></span></p>
           <% }) %>
       </div>
       <div class="left-wrapper">
@@ -65,7 +64,7 @@
         <div class="header-right-top">
         <div class="header-padding header-start">
           <h2 class="name"><%-cv.about.name.toUpperCase()%></h2>
-          <h3 class="role"><%-cv.about.role.join(', ')%></h2>
+          <h3 class="role"><%-cv.about.role.join(', ')%></h3>
           <p class="bio"><%-cv.about.bio%> <%-cv.about.relocation%></p>
         <%
           const expLen = cv.experience.length-1
@@ -74,7 +73,7 @@
         <h3 class="header-end">Experience <span class="description"> · <%-(Number.isInteger(Number(cv.experience[0].roles[0].end)) ? cv.experience[0].roles[0].end : new Date().getFullYear())-cv.experience[expLen].roles[posLen].begin%> yr</span></h3>
         </div>
         <div class="qr">
-          <%=icons.qrcode%>
+           <img src="<%=icons.qrcode%>" alt="qrcode" />
         </div>
         </div>
     </div>

@@ -78,12 +78,10 @@
   &-badge {
     padding-top: 30px;
     a:not(:first-child) {
-      padding-left: 15px;
+      margin-left: 15px;
     }
   }
 }
-
-
 
 .row {
   @media screen and (max-width: 680px) {

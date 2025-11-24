@@ -86,7 +86,7 @@ module.exports = (env, argv) => {
           ],
         },
         {
-          test: /\.(html|svg)$/,
+          test: /\.(html)$/,
           loader: "raw-loader",
           include: pages,
         },
@@ -101,8 +101,8 @@ module.exports = (env, argv) => {
           test: /\.(png|svg|pdf)$/i,
           type: "asset/resource",
           generator: {
-            filename: "assets/[name].[contenthash][ext]", // все файлы в assets/
-            publicPath: "/", // чтобы в CSS и JS подставлялся путь от корня
+            filename: "assets/[name].[contenthash][ext]",
+            publicPath: "/",
           },
           exclude: /(node_modules)/,
         },
@@ -168,6 +168,7 @@ module.exports = (env, argv) => {
             to: "favicon.ico",
           },
           { from: "src/cv.json", to: "cv.json" },
+          { from: path.resolve(__dirname, "static/images"), to: "images" },
         ],
       }),
 

@@ -3,12 +3,12 @@
     cvPage=_.template(require('./cv.html').default),
     scripts=_.template(require('./../common/scripts.html').default)({htmlWebpackPlugin})
     cvData=require('../../cv.json')
-    telegram=require('./icons/telegram.svg').default
-    mail=require('./icons/mail.svg').default
-    github=require('./icons/github.svg').default
-    phone=require('./icons/phone.svg').default
-    linkedin=require('./icons/linkedin.svg').default
-    qrcode=require('./icons/qr-code.svg').default
+    telegram=require('./icons/telegram.svg')
+    mail=require('./icons/mail.svg')
+    github=require('./icons/github.svg')
+    phone=require('./icons/phone.svg')
+    linkedin=require('./icons/linkedin.svg')
+    qrcode=require('./icons/qr-code.svg')
 %>
 
 <%=head%>
