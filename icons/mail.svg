@@ -3,7 +3,7 @@
     <circle cx="12" cy="12" r="11" stroke="black" stroke-width="1.5" />
 
     <g transform="translate(9 9) scale(0.5)"
-        fill="none" stroke="black" stroke-width="2"
+        fill="none" stroke="black" stroke-width="3"
         stroke-linecap="round" stroke-linejoin="round">
         <circle cx="6" cy="6" r="4" />
         <path d="M10 2v5a3 3 0 1 0 6 0V6a10 10 0 1 0-4 8" />
