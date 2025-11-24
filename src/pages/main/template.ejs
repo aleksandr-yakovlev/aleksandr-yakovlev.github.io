@@ -11,7 +11,7 @@
     badge=_.template(require('./screens/badge.html').default)(),
     scripts=_.template(require('./../common/scripts.html').default)({htmlWebpackPlugin})
     cv=require('../../cv.json')
-    pdf=require('../../../cv.pdf').default
+    pdf=require('../../../cv.pdf')
 %>
 
 <%=head%>

@@ -1,7 +1,7 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const path = require("path");
 
 const pages = path.resolve(__dirname, "src", "pages");
@@ -14,133 +14,164 @@ const PAGES = {
 };
 
 module.exports = (env, argv) => {
-  const isProduction = argv.mode === 'production';
-  
+  const isProduction = argv.mode === "production";
+
   return {
-    mode: isProduction ? 'production' : 'development',
+    mode: isProduction ? "production" : "development",
     entry: {
       common: PAGES.common,
       main: PAGES.main,
       geek: PAGES.geek,
       cv: PAGES.cv,
     },
-  output: {
-    path: path.resolve(__dirname, "build"),
-    filename: "[name].[contenthash].bundle.js",
-    publicPath: "/",
-  },
-  devServer: {
-    static: {
-      directory: path.join(__dirname, "build"),
+    output: {
+      path: path.resolve(__dirname, "build"),
+      filename: "[name].[contenthash].bundle.js",
+      publicPath: "/",
+      clean: true,
     },
-    compress: true,
-    port: 3000,
-    hot: true,
-    open: true,
-  },
-  resolve: {
-    extensions: [".ts", ".js", ".json"],
-  },
-  module: {
-    rules: [
-      {
-        test: /\.ts$/,
-        loader: "ts-loader",
-        exclude: /(node_modules)/,
+    devServer: {
+      static: {
+        directory: path.join(__dirname, "build"),
       },
-      {
-        test: /\.css$/i,
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          {
-            loader: "postcss-loader",
-            options: {
-              postcssOptions: {
-                plugins: [require("postcss-nested"), require("autoprefixer")],
+      compress: true,
+      port: 3000,
+      hot: true,
+      open: true,
+    },
+    resolve: {
+      extensions: [".ts", ".js", ".json"],
+      alias: {
+        "@static": path.resolve(__dirname, "static"),
+      },
+    },
+    module: {
+      rules: [
+        {
+          test: /\.ts$/,
+          loader: "ts-loader",
+          exclude: /(node_modules)/,
+        },
+        {
+          test: /\.css$/i,
+          use: [
+            {
+              loader: MiniCssExtractPlugin.loader,
+              options: {
+                publicPath: "/", // путь от корня сайта
               },
             },
+            {
+              loader: "css-loader",
+              options: {
+                url: true,
+                sourceMap: true,
+                importLoaders: 1,
+                esModule: false,
+              },
+            },
+            {
+              loader: "resolve-url-loader",
+              options: { sourceMap: true },
+            },
+            {
+              loader: "postcss-loader",
+              options: {
+                sourceMap: true,
+                postcssOptions: {
+                  plugins: [require("postcss-nested"), require("autoprefixer")],
+                },
+              },
+            },
+          ],
+        },
+        {
+          test: /\.(html|svg)$/,
+          loader: "raw-loader",
+          include: pages,
+        },
+        {
+          test: /\.ejs$/,
+          loader: "ejs-loader",
+          options: {
+            esModule: false,
           },
-        ],
-      },
-      {
-        test: /\.(html|svg)$/,
-        loader: "raw-loader",
-        include: pages,
-      },
-      {
-        test: /\.ejs$/,
-        loader: "ejs-loader",
-        options: {
-          esModule: false,
         },
-      },
-      {
-        test: /\.(pdf|png)$/,
-        type: "asset/resource",
-        generator: {
-          filename: "[path][name][ext]",
+        {
+          test: /\.(png|svg|pdf)$/i,
+          type: "asset/resource",
+          generator: {
+            filename: "assets/[name].[contenthash][ext]", // все файлы в assets/
+            publicPath: "/", // чтобы в CSS и JS подставлялся путь от корня
+          },
+          exclude: /(node_modules)/,
         },
-        exclude: /(node_modules)/,
-      },
-    ],
-  },
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        vendor: {
-          test: /[\\/]node_modules[\\/].*\.js$/,
-          chunks: "all",
+      ],
+    },
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/].*\.js$/,
+            chunks: "all",
+          },
         },
       },
     },
-  },
-  performance: {
-    maxAssetSize: 500000,
-    maxEntrypointSize: 500000,
-    hints: isProduction ? 'warning' : false,
-  },
-  plugins: [
-    new MiniCssExtractPlugin({
-      chunkFilename: "style.[contenthash].bundle.css",
-    }),
-    new HtmlWebpackPlugin({
-      inject: false,
-      filename: "index.html",
-      template: path.resolve(PAGES.main, "template.ejs"),
-      chunks: ["common", "main"],
-      loader: "ejs-loader",
-      templateParameters: {
-        _: require("lodash"),
-      },
-    }),
-    new HtmlWebpackPlugin({
-      inject: false,
-      filename: "geek.html",
-      template: path.resolve(PAGES.geek, "template.ejs"),
-      chunks: ["common", "geek"],
-      loader: "ejs-loader",
-      templateParameters: {
-        _: require("lodash"),
-      },
-    }),
-    new HtmlWebpackPlugin({
-      inject: false,
-      filename: "cv.html",
-      template: path.resolve(PAGES.cv, "template.ejs"),
-      chunks: ["common", "cv"],
-      loader: "ejs-loader",
-      templateParameters: {
-        _: require("lodash"),
-      },
-    }),
-    new CopyWebpackPlugin({
-      patterns: [
-          { from: 'static' },
-          { from: 'src/cv.json', to: 'cv.json' }
-      ]
-  }),
-    new CleanWebpackPlugin(),
-  ],
+    performance: {
+      maxAssetSize: 500000,
+      maxEntrypointSize: 500000,
+      hints: isProduction ? "warning" : false,
+    },
+    plugins: [
+      new MiniCssExtractPlugin({
+        filename: "[name].[contenthash].css",
+        chunkFilename: "[id].[contenthash].css",
+      }),
+
+      // HTML для каждой страницы
+      new HtmlWebpackPlugin({
+        inject: false,
+        filename: "index.html",
+        template: path.resolve(PAGES.main, "template.ejs"),
+        chunks: ["common", "main"],
+        loader: "ejs-loader",
+        templateParameters: {
+          _: require("lodash"),
+        },
+      }),
+      new HtmlWebpackPlugin({
+        inject: false,
+        filename: "geek.html",
+        template: path.resolve(PAGES.geek, "template.ejs"),
+        chunks: ["common", "geek"],
+        loader: "ejs-loader",
+        templateParameters: {
+          _: require("lodash"),
+        },
+      }),
+      new HtmlWebpackPlugin({
+        inject: false,
+        filename: "cv.html",
+        template: path.resolve(PAGES.cv, "template.ejs"),
+        chunks: ["common", "cv"],
+        loader: "ejs-loader",
+        templateParameters: {
+          _: require("lodash"),
+        },
+      }),
+
+      new CopyWebpackPlugin({
+        patterns: [
+          {
+            from: path.resolve(__dirname, "static/favicon.ico"),
+            to: "favicon.ico",
+          },
+          { from: "src/cv.json", to: "cv.json" },
+        ],
+      }),
+
+      new CleanWebpackPlugin(),
+    ],
   };
 };
