@@ -131,7 +131,7 @@
     "AI": ["LLM", "Agents", "ArangoDB", "Milvus", "n8n"],
     "Frontend": ["ES6/ES7", "TS/React", "WebGL"],
     "Data": ["BI", "Kafka", "ClickHouse", "ELK"],
-    "DevOps": ["Cloud-Native", "Linux", "Kubernetes"]
+    "DevOps": ["Cloud-Native", "Linux", "K8s"]
   },
   "education": [
     {
