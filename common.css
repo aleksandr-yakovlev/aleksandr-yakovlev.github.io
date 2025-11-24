@@ -18,12 +18,22 @@ body {
 }
 
 .github {
-  background: url("https://aleksandr-yakovlev.github.io/icons/github.svg") center
-    center no-repeat;
+  background: url("https://aleksandr-yakovlev.github.io/icons/github.svg")
+    center center no-repeat;
 }
 
 .mail {
   background: url("https://aleksandr-yakovlev.github.io/icons/mail.svg") center
+    center no-repeat;
+}
+
+.linkedin {
+  background: url("https://aleksandr-yakovlev.github.io/icons/linkedin.svg")
+    center center no-repeat;
+}
+
+.phone {
+  background: url("https://aleksandr-yakovlev.github.io/icons/phone.svg") center
     center no-repeat;
 }
 
@@ -47,3 +57,4 @@ a {
     padding-left: 5px;
     vertical-align: text-top;
   }
+
