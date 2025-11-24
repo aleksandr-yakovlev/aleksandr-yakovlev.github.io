@@ -147,8 +147,7 @@ body {
     vertical-align: middle;
     width: 18px;
     height: 18px;
-    background: url("https://aleksandr-yakovlev.github.io/icons/dwn.svg")
-      no-repeat;
+    background: url(/assets/dwn.1b89a4725967b1171e6d.svg) no-repeat;
   }
 .menu .light-text {
     padding-left: 3px;
@@ -164,8 +163,7 @@ body {
     left: -90%;
     width: 100%;
     height: 100%;
-    background: url(https://aleksandr-yakovlev.github.io/icons/hi.svg) no-repeat
-      top right/50%;
+    background: url(/assets/hi.b78b4fa9e5003e2c3275.svg) no-repeat top right/50%;
     position: absolute;
   }
 
@@ -207,8 +205,7 @@ body {
   left: 50%;
   width: 44px;
   height: 28px;
-  background: url("https://aleksandr-yakovlev.github.io/icons/row.svg") center
-    center no-repeat;
+  background: url(/assets/row.5a9a61e89d1c9033b498.svg) center center no-repeat;
   animation: pulse 3s infinite;
 }
 
@@ -254,8 +251,7 @@ body {
 .oasis {
   width: 89px;
   height: 43px;
-  background: url("https://aleksandr-yakovlev.github.io/icons/oasis.svg") center
-    center no-repeat;
+  background: url(/assets/oasis.d45b2d2284732967b217.svg) center center no-repeat;
 }
 
 @media screen and (max-width: 819px) {
@@ -282,13 +278,13 @@ body {
       background-repeat: no-repeat;
     }
       .left .img-techman {
-        background-image: url("https://aleksandr-yakovlev.github.io/vector/techman.svg");
+        background-image: url(/assets/techman.4816bc401325991a9ccd.svg);
       }
       .left .img-bb8 {
-        background-image: url("https://aleksandr-yakovlev.github.io/vector/bb8.svg");
+        background-image: url(/assets/bb8.7d7a7a2701de281c6380.svg);
       }
       .left .img-pizza {
-        background-image: url("https://aleksandr-yakovlev.github.io/vector/pizza.svg");
+        background-image: url(/assets/pizza.7ec7cfb28a757c71d8ef.svg);
       }
   .right {
     width: 60%;
@@ -307,7 +303,7 @@ body {
   width: 20px;
   height: 20px;
   cursor: pointer;
-  background: url("https://aleksandr-yakovlev.github.io/icons/home.svg") center
+  background: url(/assets/home.a3317941c9f7eef46e40.svg) center
     center no-repeat;
 }
 
@@ -321,8 +317,7 @@ body {
 .break {
   height: 100%;
   width: 100%;
-  background: url("https://aleksandr-yakovlev.github.io/vector/break.svg") center
-    center repeat-x;
+  background: url(/assets/break.af809b77354ed65c2f75.svg) center center repeat-x;
 }
 
 .footer {

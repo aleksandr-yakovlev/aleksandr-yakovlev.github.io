@@ -13,28 +13,23 @@ body {
 }
 
 .telegram {
-  background: url("https://aleksandr-yakovlev.github.io/icons/telegram.svg")
-    center center no-repeat;
+  background: url(/assets/telegram.386ba724a6dabbbcaa93.svg) center center no-repeat;
 }
 
 .github {
-  background: url("https://aleksandr-yakovlev.github.io/icons/github.svg")
-    center center no-repeat;
+  background: url(/assets/github.fdbf9d9846443d7e812b.svg) center center no-repeat;
 }
 
 .mail {
-  background: url("https://aleksandr-yakovlev.github.io/icons/mail.svg") center
-    center no-repeat;
+  background: url(/assets/mail.91e4691dcd334a0b7ed6.svg) center center no-repeat;
 }
 
 .linkedin {
-  background: url("https://aleksandr-yakovlev.github.io/icons/linkedin.svg")
-    center center no-repeat;
+  background: url(/assets/linkedin.47baafc08601e393eb0f.svg) center center no-repeat;
 }
 
 .phone {
-  background: url("https://aleksandr-yakovlev.github.io/icons/phone.svg") center
-    center no-repeat;
+  background: url(/assets/phone.93c3cf655524e6502e91.svg) center center no-repeat;
 }
 
 a {
