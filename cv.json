@@ -1,7 +1,7 @@
 {
   "about": {
     "name": "Aleksandr Yakovlev",
-    "role": ["Technical Director", "Engineering Manager"],
+    "role": ["Technical Product Manager"],
     "bio": "IT enthusiast with 10+ years leadership experience in bringing product ideas to launch. Managing agile teams which are geographically distributed. I like engineering challenges, passionate in technologies, performance and architecture.",
     "relocation": "Open to relocation on a global level.",
     "born year": 1989,
@@ -25,7 +25,7 @@
       },
       "roles": [
         {
-          "role": "Technical & Product Manager",
+          "role": "Technical Product Manager",
           "begin": 2022,
           "end": "present",
           "tasks": [
@@ -100,7 +100,7 @@
       },
       "roles": [
         {
-          "role": "Infrastructure & Software Engineer",
+          "role": "Software Engineer",
           "begin": 2011,
           "end": 2015,
           "tasks": [
@@ -131,7 +131,7 @@
     "AI": ["LLM", "Agents", "ArangoDB", "Milvus", "n8n"],
     "Frontend": ["ES6/ES7", "TS/React", "WebGL"],
     "Data": ["BI", "Kafka", "ClickHouse", "ELK"],
-    "DevOps": ["Cloud-Native", "Linux", "Kubernetes"]
+    "DevOps": ["Cloud-Native", "Linux", "K8s"]
   },
   "education": [
     {
@@ -160,7 +160,7 @@
   "languages": [
     {
       "language": "English",
-      "rank": "B1"
+      "rank": "B2"
     },
     {
       "language": "Russian",
