@@ -1,10 +1,12 @@
 {
   "about": {
     "name": "Aleksandr Yakovlev",
-    "role": ["Technical Product Manager"],
-    "bio": "IT enthusiast with 10+ years leadership experience in bringing product ideas to launch. Managing agile teams which are geographically distributed. I like engineering challenges, passionate in technologies, performance and architecture.",
+    "role": [
+      "Technical Product Manager"
+    ],
+    "bio": "I build AI products and platforms from idea to scale, combining deep engineering, product thinking, and systems mindset. I shape technology strategy, architecture, and engineering culture, staying hands-on at the level of key decisions and core architecture. My focus is on scalable products that deliver measurable business impact and create strong, autonomous teams.",
     "relocation": "Open to relocation on a global level.",
-    "born year": 1989,
+    "born year": 1994,
     "location": "Moscow, Russia",
     "email": "aleksandr.yakovlev@live.com",
     "linkedin": "https://www.linkedin.com/in/asyakovlev/",
@@ -25,50 +27,92 @@
       },
       "roles": [
         {
-          "role": "Technical Product Manager",
-          "begin": 2022,
+          "role": "Technical Product Manager AI",
+          "begin": 2024,
           "end": "present",
           "tasks": [
-            "Defined and executed AI technology strategy: architecture, operating model, and scalable ecosystem of AI assistants embedded into business processes",
-            "Built an enterprise-grade RAG platform and conversational agents for production-data analysis, accelerating knowledge access and operational insights",
-            "Developed a data-driven decision-support system leveraging behavioral and operational signals to improve project delivery and team performance",
-            "Developed components for autonomous mobility: driver and passenger apps, real-time 3D visualization, and a screencast platform",
-            "Built multiple engineering teams"
+            "Focus: building a product + research direction for AI tools",
+            "Built a new corporate AI tools domain from scratch",
+            "Developed a Glean/Notion-like enterprise chatbot",
+            "Deployed 30B+ models to production",
+            "Delivered capabilities: RAG, Agents, Skills",
+            "Enabled tool integration via MCP"
           ],
           "stack": [
-            "TS/React",
-            "Python",
-            "C++",
-            "LLM",
+            "Gemma",
+            "Qwen",
+            "GigaChat",
             "LangChain",
+            "MCP",
             "ArangoDB",
-            "Milvus",
-            "n8n",
-            "WebGL",
-            "ROS2",
-            "GLB",
-            "JRPC"
+            "Milvus"
+          ]
+        },
+        {
+          "role": "Product Manager HMI",
+          "begin": 2023,
+          "end": 2024,
+          "tasks": [
+            "Focus: product transformation, strategy building, and product roadmap development",
+            "Supporting company product strategy for HMI and Taxi domains",
+            "Development of autonomous driving functions: safety, ADAS, deployment, and diagnostics of autonomous vehicles",
+            "Transformation of development processes using the V-model, with PI planning внедрение under SAFe/LeSS",
+            "Key result: products reached target maturity for Level 4 autonomous driving"
+          ],
+          "stack": [
+            "Product Roadmaps",
+            "Product Vision",
+            "Roadmap",
+            "Strategy"
+          ]
+        },
+        {
+          "role": "Product Manager HMI",
+          "begin": 2023,
+          "end": 2024,
+          "tasks": [
+            "Focus: engineering leadership and improving the reliability of delivered solutions",
+            "Built multiple development teams (20+ engineers)",
+            "Established a sustainable org structure and clear ownership areas",
+            "Implemented: quality gates, feature environments, A/B testing, monorepo, semver, GitFlow, acceptance testing, MDM+MAM, React 18",
+            "Launched autonomous transport products into production: driver tablet, passenger tablet",
+            "3D visualization system, and a screencast platform"
+          ],
+          "stack": [
+            "С++",
+            "Python",
+            "TypeScript",
+            "React",
+            "JavaScript",
+            "ROS",
+            "PostgreSQL"
           ]
         }
       ]
     },
     {
       "company": {
-        "name": "Sber",
-        "site": "https://sber.ru/"
+        "name": "Startup NDA"
       },
       "roles": [
         {
-          "role": "Head of Development / Platform Engineering Lead",
+          "role": "CTO",
           "begin": 2020,
           "end": 2022,
           "tasks": [
-            "Built and managed a distributed team of 70+ engineers across internal, external, and client environments",
-            "Standardized engineering practices (CI/CD, QA, code review, agile) and enabled clients to independently develop and operate solutions",
-            "Delivered PoCs to production as SaaS products; implemented multitenant architecture reducing TCO and improving scalability",
-            "Led presales, technical consulting, and architectural design for enterprise projects"
+            "I joined the company at the founder stage and built the engineering function from scratch, scaling it into a distributed team of 70+ engineers (backend, frontend, mobile, QA, DevOps). I was responsible for the development of the PaaS platform, on-premise deployments for enterprise clients, and co-development of applied solutions",
+            "Led technical consulting, defined architecture, and designed end-to-end solutions based on client requirements",
+            "Designed and delivered solutions for key customers — from initiation to industrial production, followed by transition to a SaaS model",
+            "Managed development and infrastructure budgets, planning, and prioritization",
+            "Introduced unified engineering practices and standards (code review, CI/CD, QA) and organized systematic training for client engineering teams",
+            "Implemented a multi-tenant platform architecture, reducing TCO, simplifying operations, and significantly improving scalability"
           ],
-          "stack": ["TS/React", "Java/Spring", "Ionic", "Platform V"]
+          "stack": [
+            "Leadership Skills",
+            "Team management",
+            "Java",
+            "React"
+          ]
         },
         {
           "role": "Team Lead / Senior Developer",
@@ -92,71 +136,38 @@
           ]
         }
       ]
-    },
-    {
-      "company": {
-        "name": "Alfabank",
-        "site": "https://alfabank.com/"
-      },
-      "roles": [
-        {
-          "role": "Software Engineer",
-          "begin": 2011,
-          "end": 2015,
-          "tasks": [
-            "Automated core ITSM processes, delivered BI and monitoring systems, and ensured architectural compliance",
-            "Supported and evolved network and service infrastructure across regional branches"
-          ]
-        }
-      ]
-    },
-    {
-      "company": {
-        "name": "Trust bank"
-      },
-      "roles": [
-        {
-          "role": "Infrastructure Engineer",
-          "begin": 2010,
-          "end": 2011,
-          "tasks": [
-            "Maintained branch IT infrastructure: networks, ATMs, servers, and workstations; coordinated with vendors"
-          ]
-        }
-      ]
     }
   ],
   "skills": {
-    "Management": ["Product Strategy", "Agile", "ITSM"],
-    "AI": ["LLM", "Agents", "ArangoDB", "Milvus", "n8n"],
-    "Frontend": ["ES6/ES7", "TS/React", "WebGL"],
-    "Data": ["BI", "Kafka", "ClickHouse", "ELK"],
-    "DevOps": ["Cloud-Native", "Linux", "K8s"]
+    "Management": [
+      "Product Strategy",
+      "Agile",
+      "ITSM"
+    ],
+    "AI": [
+      "LLM",
+      "Agents",
+      "ArangoDB",
+      "Milvus",
+      "n8n"
+    ],
+    "Frontend": [
+      "ES6/ES7",
+      "TS/React",
+      "WebGL"
+    ],
+    "Data": [
+      "BI",
+      "Kafka",
+      "ClickHouse",
+      "ELK"
+    ],
+    "DevOps": [
+      "Cloud-Native",
+      "Linux",
+      "K8s"
+    ]
   },
-  "education": [
-    {
-      "institution": {
-        "name": "Northern (Arctic) Federal University named after M.V. Lomonosov",
-        "site": "https://narfu.ru/en/"
-      },
-      "programmes": [
-        {
-          "department": "Institute of Information and Space Technologies",
-          "major": "Information Systems and Technologies",
-          "level": "Developer (University)",
-          "begin": "2009",
-          "end": "2012"
-        },
-        {
-          "department": "College of Telecommunications and Information Technology",
-          "major": "Computer Software",
-          "level": "Developer (College)",
-          "begin": "2006",
-          "end": "2009"
-        }
-      ]
-    }
-  ],
   "languages": [
     {
       "language": "English",
@@ -167,5 +178,10 @@
       "rank": "Native"
     }
   ],
-  "interests": ["Traveling", "Snowboard", "Swimming", "Computer science"]
+  "interests": [
+    "Traveling",
+    "Snowboard",
+    "Swimming",
+    "Computer science"
+  ]
 }
