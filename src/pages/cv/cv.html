@@ -70,7 +70,6 @@
           const expLen = cv.experience.length-1
           const posLen = cv.experience[expLen].roles.length-1
         %>
-        <h3 class="header-end">Experience <span class="description"> · <%-(Number.isInteger(Number(cv.experience[0].roles[0].end)) ? cv.experience[0].roles[0].end : new Date().getFullYear())-cv.experience[expLen].roles[posLen].begin%> yr</span></h3>
         </div>
         <div class="qr">
            <img src="<%=icons.qrcode%>" alt="qrcode" />
@@ -140,44 +139,7 @@
               <% }) %> 
             <% } %>
           <% }) %>
-        </table>  
-         <h3 class="education">Education</h3>
-         <table class="etable">
-            <%cv.education.forEach(({institution, programmes}) => { %>
-              <tr class="text-row">
-                <td colspan="2">
-                  <h4 class="company">
-                    <a href="<%-institution.site%>">
-                 <span><%=institution.name%></span>
-                </a>
-                  </h4>
-                </td>
-              </tr>
-              <tr class="line-row">
-                <td class="left-td"></td>
-              </tr>
-                <%programmes.forEach(({major, end, level},i) => { %>
-                  <tr class="text-row"> 
-                    <td  class="left-td <%if (i!==0) {%> padded-m<% } %>"></td>
-                    <td rowspan="3"  <%if (i!==0) {%>class="padded"<% } %>>
-                      <p class="program">
-                        <span><%-major%></span>
-                        <span class="description"><%=` · ${end}`%></span>
-                      </p>
-                      <p class="description"><%-level%></p>
-                    </td>
-                  </tr>
-                  <tr class="circle-row">
-                    <td>
-                      <div class="circle"></div>
-                  </td>
-                </tr>
-                  <tr class="line-row">
-                    <td class="left-td"></td>
-                  </tr>
-              <% }) %>   
-            <% }) %>
-          </table>   
+        </table>   
     </div>
   </div>
 </div>

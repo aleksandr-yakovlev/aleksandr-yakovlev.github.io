@@ -5,7 +5,7 @@
       "Technical Product Manager"
     ],
     "bio": "I build AI products and platforms from idea to scale, combining deep engineering, product thinking, and systems mindset. I shape technology strategy, architecture, and engineering culture, staying hands-on at the level of key decisions and core architecture. My focus is on scalable products that deliver measurable business impact and create strong, autonomous teams.",
-    "relocation": "Open to relocation on a global level.",
+    "relocation": "",
     "born year": 1994,
     "location": "Moscow, Russia",
     "email": "aleksandr.yakovlev@live.com",
@@ -112,27 +112,6 @@
             "Team management",
             "Java",
             "React"
-          ]
-        },
-        {
-          "role": "Team Lead / Senior Developer",
-          "begin": 2015,
-          "end": 2020,
-          "tasks": [
-            "Architected a 10TB analytical platform integrating 20+ data sources with MPP processing",
-            "Drove agile transformation improving transparency and delivery velocity",
-            "Built data-driven service quality monitoring used in executive decision-making",
-            "Presented technical solutions to C-level stakeholders and influenced key strategic initiatives"
-          ],
-          "stack": [
-            "TS/React",
-            "Node.js",
-            "ClickHouse",
-            "Greenplum",
-            "ELK",
-            "Superset",
-            "Kafka",
-            "NiFi"
           ]
         }
       ]
